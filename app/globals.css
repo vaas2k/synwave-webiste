@@ -69,6 +69,7 @@
 }
 
 .dropdown-item {
+  background:none;
   position: relative;
   padding-left: 25px; /* Add padding to make space for the line */
 }
