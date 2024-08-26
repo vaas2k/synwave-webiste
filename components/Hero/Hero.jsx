@@ -9,23 +9,43 @@ export default function Hero() {
     "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fHw%3D",
   ];
+
   const words = [
     {
-      text: "Build",
+      text: "Forging",
     },
     {
-      text: "awesome",
+      text: "Next-Gen",
     },
     {
-      text: "Solutions",
+      text: "Software",
     },
     {
-      text: "with",
+      text: "for",
     },
     {
-      text: "Synwave.",
+      text : "a"
+    },
+    {
+      text : "Bold"
+    },
+    {
+      text : "New"
+    },
+    {
+      text : "Era"
+    },
+    {
+      text : "at"
+    },
+    {
+      text: " 'Synwave ",
       className: "text-rose-500 dark:text-rose-500",
     },
+    {
+      text: " Solutions'",
+      className: "text-rose-500 dark:text-rose-500",
+    }
   ];
 
   return (
@@ -46,11 +66,11 @@ export default function Hero() {
           className="z-50 flex flex-col justify-center items-center"
         >
           <motion.p className="md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-rose-800 py-4">
-            <div className="flex flex-col items-center justify-center h-[10rem] ">
-              <p className="text-neutral-600 dark:text-neutral-200 text-base  mb-10">
+            <div className="flex flex-col items-center justify-center h-[10rem] w-[300px] sm:w-[900px]">
+              <TypewriterEffect words={words} />
+              <p className="text-white dark:text-neutral-200 text-base text-sm sm:text-md  mt-10 mb-10">
                 We harness cutting-edge AI technology to deliver top-quality solutions, on time and within budget.
               </p>
-              <TypewriterEffect words={words} />
             </div>
           </motion.p>
 
@@ -60,7 +80,7 @@ export default function Hero() {
               <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-rose-500 to-transparent" />
             </button>
             <button className="px-4 py-2 hover:p-[12px] duration-500 backdrop-blur-sm border bg-gray-300/10 hover:bg-rose-300/20 border-gray-100/20 text-white mx-auto text-center rounded-full relative mt-4">
-              <span>Our Work</span>
+              <span>Let's Talk</span>
               <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-rose-500 to-transparent" />
             </button>
           </div>

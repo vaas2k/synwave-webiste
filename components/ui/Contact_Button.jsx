@@ -9,7 +9,7 @@ import { Mail } from 'lucide-react';
 const Contact_Button = ({color,word,bg}) => {
     return (
         <Modal>
-            <ModalTrigger className={`bg-${bg} dark:bg-${bg} dark:text-${color} text-${color} flex justify-center group/modal-btn`}>
+            <ModalTrigger className={`bg-${bg} dark:bg-${bg}  dark:text-${color} text-white flex justify-center group/modal-btn`}>
                 <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
                     {word}
                 </span>

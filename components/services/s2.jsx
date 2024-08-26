@@ -6,12 +6,12 @@ const S2 = () => {
     return (
         <div className=''>
             <div className='flex items-center justify-center pt-[100px] flex-col '>
-                <div className='flex pb-[30px]'>
-                    <h1 className='text-[30px]'> <b>Our</b></h1>
-                    <h1 className='text-[30px] text-rose-500 pl-[15px] font-bold'><b>Services</b></h1>
+                <div className='text-center pb-[30px] w-[300px] sm:w-[900px]'>
+                    <h1 className='text-lg sm:text-2xl font-bold'> From Concept to Completeion,</h1>
+                    <h1 className='text-xl sm:text-4xl text-rose-500 pl-[15px] font-bold'>We deliver Full-Stack Expertise.</h1>
                 </div>
                 <div>
-                    <p className='sm:w-[700px] w-[300px] text-sm flex text-center pb-[30px]'>
+                    <p className='sm:w-[700px] w-[300px] text-[12px] sm:text-sm flex text-center pb-[30px]'>
                         We follow a structured approach for web and mobile development,
                         with planning, testing, and execution stages. We work with clients
                         to ensure software is reliable, secure, and user-friendly.

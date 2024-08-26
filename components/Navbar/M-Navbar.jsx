@@ -50,12 +50,9 @@ const M_Navbar = () => {
                     <SheetTitle>
                     <DropdownMenu>
                         <Link href={'/services'}>
-                            <DropdownMenuTrigger >
                                 <div className='flex items-center justify-center gap-[6px] text-white hover:text-red-500 text-sm cursor-pointer duration-500'>
                                     <h1>Services</h1>
-                                    <ChevronDown size={'18px'} />
-                                </div>
-                            </DropdownMenuTrigger>
+                                </div>                            
                         </Link>
 
                             <DropdownMenuContent className="p-[10px] px-[20px]">

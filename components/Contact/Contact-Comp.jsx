@@ -1,17 +1,18 @@
 import React from 'react';
 import Contact_Button from '../ui/Contact_Button';
 import { ShieldHalf, CircleArrowOutUpRight, HandCoins } from 'lucide-react';
+import whiteLogo from '/public/logos/white logo.png'; // Importing the image statically
+import Image from 'next/image';
 
 const Contact = () => {
     return (
-        <div className='relative flex flex-col lg:flex-row items-center justify-center h-auto lg:h-[30rem] w-full p-[20px] lg:p-[40px] mb-[40px] gap-[40px] lg:gap-[200px] bg-[url("https://images.unsplash.com/photo-1536859355448-76f92ebdc33d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHByb2dyYW1taW5nfGVufDB8fDB8fHww")] bg-cover bg-center bg-no-repeat'>
-            <div className="absolute inset-0 bg-black opacity-30"></div>
-
+        <div className='relative flex flex-col lg:flex-row items-center justify-center h-auto lg:h-[30rem] w-full p-[20px] lg:p-[40px] mb-[40px] gap-[40px] lg:gap-[200px]'>
+        
             {/* Content Section */}
             <div className='relative flex items-center justify-center flex-col text-start lg:text-left'>
                 <h1 className="text-xl sm:text-3xl dark:text-white animate-fadeIn">Discuss with our experts!</h1>
                 <h1 className="text-xl sm:text-3xl text-center dark:text-white animate-fadeIn delay-150">Let us help you build the solution</h1>
-                <p className='sm:w-[500px] w-[300px] lg:w-[500px] text-sm lg:text-base text-center pb-[30px] mt-[10px] text-neutral-200 animate-fadeIn delay-300'>
+                <p className='sm:w-[500px] w-[300px] lg:w-[500px] text-sm lg:text-base text-center pb-[30px] mt-[10px] animate-fadeIn delay-300'>
                     With advanced tools like ChatGPT and CoPilot, software development is evolving faster than ever. <br />
                     We ensure a positive impact on your project or we’ll continue working at no additional cost until we achieve it.
                 </p>

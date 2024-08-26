@@ -7,14 +7,14 @@ const Footer = () => {
   return (
 
     <>
-    <div className='w-full px-4 sm:px-8 lg:px-[60px] py-12 sm:py-16 bg-zinc-900 text-white'>
+    <div className='w-full px-4 sm:px-8 lg:px-[60px] py-12 sm:py-10 '>
       <div className='flex flex-col lg:flex-row justify-center gap-10 lg:gap-16 flex-wrap'>
         
         {/* Address Section */}
         <div className='flex flex-col w-full sm:w-auto text-[14px]'>
-          <img src='/logos/white.png' className='w-[100px] h-[100px] mb-4 mt-[-25px]' />
-          <p className='mb-2'>
-            Head Office
+          <img src='/logos/black.png' className='w-[100px] h-[100px] mb-4 mt-[-25px]' />
+          <p className='mb-2 text-[12px]'>
+            <h className="font-bold text-[14px]">England</h>
             <br/>
             <br/>
             17 Albert Road
@@ -24,6 +24,18 @@ const Footer = () => {
             Birmingham
             <br />
             United Kingdom
+          </p>
+          <p className='mb-2 mt-2 text-[12px]' >
+          <h className="font-bold text-[14px]">Islamabad</h>
+            <br/>
+            <br/>
+            731, Street 10
+            <br />
+            i-10
+            <br />
+            Islamabad
+            <br />
+            Pakistan
           </p>
           <p className='underline decoration-solid cursor-pointer hover:text-red-500 duration-500'>
             sales@synwavesolutions.com
@@ -74,14 +86,16 @@ const Footer = () => {
           <h1 className="text-lg mb-4">Subscribe</h1>
           <h2 className="text-md mb-4">Stay updated with us!</h2>
           <Input type="email" placeholder="Email" className="mb-4 pr-2" />
-          <Button variant="outline" className="flex gap-2 items-center">
+          <Button variant="outline" className="flex gap-2 items-center hover:text-white">
             Subscribe
             <Send size={'18px'} />
           </Button>
         </div>
-        <div className=' flex gap-[30px] text-[12px] '>
-          <h className="cursor-pointer hover:text-red-500 duration-500">Terms & Conditions</h> 
-          <h className="cursor-pointer hover:text-red-500 duration-500">Policy</h> </div>
+        <div className=' flex gap-[15px] text-[12px] flex items-center '> 
+        <h className="cursor-pointer  flex items-center gap-[10px]"> <p className='text-[20px] flex'>&copy;</p> SYNWAVE SOLUTIONS.</h>
+        <h className="cursor-pointer ">All Rights Reserved.</h> 
+          <h className="cursor-pointer ">Terms & Conditions</h> 
+          <h className="cursor-pointer ">Policy</h> </div>
       </div>
 
       {/* Optional Logo */}

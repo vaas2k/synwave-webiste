@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer/Footer'
 
 const inter = Inter({ subsets: ["latin"] });
-const signika = Signika({subsets:['latin']});
+const signika = Signika({subsets:['latin'],weight:'400'});
 const dangrek = Dangrek({subsets:['latin'],weight:'400'});
 const revalia = Revalia({subsets:['latin'],weight:['400']});
 const ubuntu = Ubuntu_Mono({subsets:['latin'],weight:['700']});
@@ -16,8 +16,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${trispace.className} bg-zinc-900 min-h-screen flex flex-col`}>
+    <html lang="en" className="">
+      <body className={`${signika.className} min-h-screen flex flex-col`}>
         <Navbar />
         <main className="flex-grow">
           {children}

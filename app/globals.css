@@ -68,8 +68,36 @@
   }
 }
 
+@layer base {
+  /* Scrollbar for WebKit browsers (Chrome, Safari, etc.) */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 12px; /* For horizontal scrollbar */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent; /* Background color of the scrollbar track */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--foreground)); /* Thumb color */
+    border-radius: 6px; /* Roundness of the thumb */
+    border: 3px solid hsl(var(--muted)); /* Adds some padding */
+  }
+
+  /* Scrollbar for Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--foreground)) hsl(var(--muted)); /* Thumb and track color for Firefox */
+
+  /* For applying styles on the scrollbar */
+  body {
+    scrollbar-width: thin; /* Thin scrollbar in Firefox */
+    scrollbar-color: hsl(var(--foreground)) hsl(var(--muted)); /* Thumb and track color */
+  }
+}
+
 .dropdown-item {
-  background:none;
+  background: none;
   position: relative;
   padding-left: 25px; /* Add padding to make space for the line */
 }
@@ -79,7 +107,7 @@
 }
 
 .dropdown-item::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 50%;
@@ -94,3 +122,51 @@
   width: 20px; /* Line will grow to 20px */
 }
 
+.mouse-wrap {
+  display: inline-block;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 50px;
+  z-index: 9;
+}
+.mouse-wrap:active,
+.mouse-wrap:active > .mouse-label,
+.mouse-wrap:focus,
+.mouse-wrap:focus > .mouse-label {
+  outline: none;
+}
+.mouse-wrap.mouse-with-slider {
+  bottom: -50px;
+}
+.mouse-wrap .mouse-label {
+  top: 0;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+}
+.mouse-wrap .mouse {
+  width: 22px;
+  height: 42px;
+  bottom: 30px;
+  display: block;
+  left: 50%;
+  margin-left: -12px;
+  border-radius: 15px;
+  border: 2px solid #fff;
+  -webkit-animation: intro 2s;
+  animation: intro 2s;
+}
+.mouse-wrap .mouse .scroll {
+  display: block;
+  width: 3px;
+  height: 3px;
+  margin: 6px auto;
+  border-radius: 4px;
+  background: #fff;
+  -webkit-animation: finger 2s infinite;
+  animation: finger 2s infinite;
+}
