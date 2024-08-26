@@ -61,7 +61,7 @@ const Page = ({ params }) => {
 
 
   return (
-    <div className='py-[50px] mt-[40px]'>
+    <div className='py-[50px] mt-[25px] sm:mt-[40px]'>
 
       {/**Header */}
       <div className="relative flex items-center justify-center h-[25rem] w-full">

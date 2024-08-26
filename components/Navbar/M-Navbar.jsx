@@ -14,7 +14,7 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "../ui/sheet"
-import { ChevronDown} from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import { AlignJustify } from 'lucide-react';
 import Contact_Button from '../ui/Contact_Button';
 import Link from 'next/link';
@@ -25,22 +25,25 @@ const M_Navbar = () => {
 
     const router = useRouter();
     const [activeLink, setActiveLink] = useState(router.pathname);
-    const services = ['Custom Software Development', 'Mobile App Development', 'Web Development', 'Generative AI', 'DevOps', 'Video Editing']
+    const services = ['Custom Software Development', 'Mobile App Development', 'Web Development', 'Generative AI', 'DevOps', 'Video Editing'];
+
     return (
         <div>
             <Sheet>
-                <SheetTrigger><AlignJustify size={'20px'} /></SheetTrigger>
-                <SheetContent className="flex items-start justify-center gap-[30px ] flex-col w-[200px] sm:w-[240px] bg-transparent">
-                    <SheetTitle >
+                <SheetTrigger>
+                    <AlignJustify color='white' size={'20px'} className="text-gray-800" /> {/* Adjust color for white theme */}
+                </SheetTrigger>
+                <SheetContent className="flex items-start justify-center gap-[30px] flex-col w-[200px] sm:w-[240px] bg-white shadow-lg"> {/* Set background to white */}
+                    <SheetTitle>
                         <Link href="/">
                             <div
-                                className={`text-white hover:text-red-500 text-sm cursor-pointer duration-500 relative ${activeLink === '/' ? 'text-red-500' : ''
+                                className={`text-gray-800 hover:text-rose-500 text-sm cursor-pointer duration-500 relative ${activeLink === '/' ? 'text-rose-500' : ''
                                     }`}
                                 onClick={() => setActiveLink('/')}
                             >
                                 <h1>Home</h1>
                                 <span
-                                    className={`absolute left-0 bottom-[-4px] h-[2px] bg-red-500 transition-all duration-500 ${activeLink === '/' ? 'w-full' : 'w-0'
+                                    className={`absolute left-0 bottom-[-4px] h-[2px] bg-rose-500 transition-all duration-500 ${activeLink === '/' ? 'w-full' : 'w-0'
                                         } group-hover:w-full`}
                                 ></span>
                             </div>
@@ -48,25 +51,25 @@ const M_Navbar = () => {
                     </SheetTitle>
 
                     <SheetTitle>
-                    <DropdownMenu>
-                        <Link href={'/services'}>
-                                <div className='flex items-center justify-center gap-[6px] text-white hover:text-red-500 text-sm cursor-pointer duration-500'>
+                        <DropdownMenu>
+                            <Link href={'/services'}>
+                                <div className='flex items-center justify-center gap-[6px] text-gray-800 hover:text-rose-500 text-sm cursor-pointer duration-500'>
                                     <h1>Services</h1>
-                                </div>                            
-                        </Link>
+                                </div>
+                            </Link>
 
-                            <DropdownMenuContent className="p-[10px] px-[20px]">
-
+                            <DropdownMenuContent className="p-[10px] px-[20px] bg-white shadow-md border border-gray-200">
                                 {services.map((value, index) => {
                                     return (
                                         <Link href={`/services/${value}`} key={index}>
-                                            <DropdownMenuItem >
-                                                <div className="dropdown-item hover:pl-[40px] cursor-pointer py-[10px] text-sm duration-500 bg-gray-900">{value}</div>
+                                            <DropdownMenuItem>
+                                                <div className="dropdown-item hover:pl-[40px] cursor-pointer py-[10px] text-sm duration-500 text-gray-800 hover:text-rose-500">
+                                                    {value}
+                                                </div>
                                             </DropdownMenuItem>
                                         </Link>
-                                    )
+                                    );
                                 })}
-
                             </DropdownMenuContent>
                         </DropdownMenu>
                     </SheetTitle>
@@ -74,13 +77,13 @@ const M_Navbar = () => {
                     <SheetTitle>
                         <Link href="/about">
                             <div
-                                className={`text-white hover:text-red-500 text-sm cursor-pointer duration-500 relative ${activeLink === '/about' ? 'text-red-500' : ''
+                                className={`text-gray-800 hover:text-rose-500 text-sm cursor-pointer duration-500 relative ${activeLink === '/about' ? 'text-rose-500' : ''
                                     }`}
                                 onClick={() => setActiveLink('/about')}
                             >
                                 <h1>About Us</h1>
                                 <span
-                                    className={`absolute left-0 bottom-[-4px] h-[2px] bg-red-500 transition-all duration-500 ${activeLink === '/about' ? 'w-full' : 'w-0'
+                                    className={`absolute left-0 bottom-[-4px] h-[2px] bg-rose-500 transition-all duration-500 ${activeLink === '/about' ? 'w-full' : 'w-0'
                                         } group-hover:w-full`}
                                 ></span>
                             </div>
@@ -90,13 +93,13 @@ const M_Navbar = () => {
                     <SheetTitle>
                         <Link href="/work">
                             <div
-                                className={`text-white hover:text-red-500 text-sm cursor-pointer duration-500 relative ${activeLink === '/work' ? 'text-red-500' : ''
+                                className={`text-gray-800 hover:text-rose-500 text-sm cursor-pointer duration-500 relative ${activeLink === '/work' ? 'text-rose-500' : ''
                                     }`}
                                 onClick={() => setActiveLink('/work')}
                             >
                                 <h1>Our Work</h1>
                                 <span
-                                    className={`absolute left-0 bottom-[-4px] h-[2px] bg-red-500 transition-all duration-500 ${activeLink === '/work' ? 'w-full' : 'w-0'
+                                    className={`absolute left-0 bottom-[-4px] h-[2px] bg-rose-500 transition-all duration-500 ${activeLink === '/work' ? 'w-full' : 'w-0'
                                         } group-hover:w-full`}
                                 ></span>
                             </div>
@@ -104,14 +107,14 @@ const M_Navbar = () => {
                     </SheetTitle>
 
                     <div className='absolute bottom-2 text-[14px]'>
-                        <Link href={'contact'}>
-                            <Contact_Button />
+                        <Link href={'/contact'}>
+                            <Contact_Button className="bg-rose-500 text-white hover:bg-rose-600" /> {/* Ensure button stands out */}
                         </Link>
                     </div>
                 </SheetContent>
             </Sheet>
         </div>
-    )
+    );
 }
 
 export default M_Navbar;

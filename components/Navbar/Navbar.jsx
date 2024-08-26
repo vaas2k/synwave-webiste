@@ -161,14 +161,14 @@ const Navbar = ({ params }) => {
             {/* Mobile Navbar */}
             <div className="block sm:hidden">
                 <div
-                    className={`flex items-center justify-between px-[20px] w-full fixed top-0 left-0 z-50 transition-colors duration-300 ${isScrolled ? 'bg-transparent text-white' : 'bg-transparent text-white'
+                    className={`flex items-center justify-between px-[20px] w-full fixed top-0 left-0 z-50 transition-colors duration-300 ${isScrolled || !landing ? 'bg-zinc-950 text-white' : 'bg-transparent text-white'
                         }`}
                 >
                     <Link href="/">
                         <div className="flex">
                              <img
                             src="/logos/white.png"
-                            className="w-[80px] h-[80px]"
+                            className="w-[75px] h-[75px]"
                             alt="Synwave"
                             />
                          

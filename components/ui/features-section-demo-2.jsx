@@ -1,3 +1,4 @@
+'use client'
 import { cn } from "../../lib/utils";
 import {
   IconAdjustmentsBolt,
@@ -11,8 +12,12 @@ import {
 } from "@tabler/icons-react";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function FeaturesSectionDemo() {
+
+ 
+
   const features = [
     {
       title: "Custom Software Development",
@@ -75,8 +80,11 @@ const Feature = ({
   icon,
   index,
 }) => {
+
+  const router = useRouter();
   return (
     <div
+      onClick={() => { router.push(`/service/${title}`)}}
       className={cn(
         "flex flex-col lg:border-r  py-10 relative group/feature dark:border-neutral-800 cursor-pointer",
         (index === 0 || index === 4) && "lg:border-l dark:border-neutral-800",
