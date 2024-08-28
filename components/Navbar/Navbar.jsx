@@ -13,7 +13,7 @@ import { Button } from '../ui/button';
 import M_Navbar from './M-Navbar';
 import MobileNavbar from './Mobile-Navbar';
 
-const Navbar = ({ params }) => {
+const Navbar = () => {
 
     const pathname = usePathname();
     const [activeLink, setActiveLink] = useState(pathname);
@@ -22,13 +22,13 @@ const Navbar = ({ params }) => {
     const [landing, setLanding] = useState(true);
 
     useEffect(() => {
-        setLanding(pathname == '/' ? true : false);
+        setLanding(pathname == '/'  ? true : false);
     }, [pathname]);
 
     const services = [
         'Custom Software Development',
         'Mobile App Development',
-        'Web Development',
+        'Web App Development',
         'Generative AI',
         'DevOps',
         'Video Editing',
@@ -51,16 +51,16 @@ const Navbar = ({ params }) => {
     return (
         <>
             {/* Desktop Navbar */}
-            <div className="hidden sm:block">
+            <div className="hidden sm:block ">
                 <div
-                    className={`flex items-center justify-between px-[50px] w-full fixed top-0 left-0 z-50 transition-colors duration-300 ${isScrolled || !landing ? 'bg-zinc-900 text-white' : 'bg-transparent text-white'
+                    className={`flex  items-center justify-between px-[50px] w-full fixed top-0 left-0 z-50 transition-colors duration-300 ${isScrolled || !landing ? 'bg-white text-black' : 'bg-transparent text-white'
                         }`}
                 >
                     <Link href="/">
                         <div className="flex">
                                 <img
-                                    src="/logos/white.png"
-                                    className="w-[95px] h-[95px]"
+                                    src="/logos/new black.png"
+                                    className="h-[40px] my-[10px]"
                                     alt="Synwave"
                                 />                               
                         </div>

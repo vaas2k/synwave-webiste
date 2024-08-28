@@ -1,10 +1,13 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
-import dots from '../../public/hero images/dots.png';
 import StickyScroll from '../ui/tracing-beam.jsx'
-import { Mouse, ChevronsDown  } from 'lucide-react';
-import Discovery from '../../public/hero images/discovery.jpg'
-import strategy from '../../public/hero images/strategy.jpg'
+import { motion } from 'framer-motion';
+
+const textVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } } // Smooth animation for text
+};
 
 const content = [
     {
@@ -12,7 +15,7 @@ const content = [
       description:
         "We dive deep to understand your vision, goals, and challenges, ensuring a clear and shared understanding.",
         content: (
-            <div className="h-full w-full flex items-center justify-center text-white">
+            <motion.div initial="hidden" whileInView="visible" variants={textVariants} className="h-full w-full flex items-center justify-center text-white">
                 <Image
                     src='/hero images/st.png'
                     alt="Discovery"
@@ -21,7 +24,7 @@ const content = [
                     objectPosition="start" // Centers the image
                     className="z-[-1] w-[300px] h-[300px] " // Puts the image behind the content
                 />
-            </div>
+            </motion.div>
       ),
     },
     {
@@ -29,33 +32,33 @@ const content = [
       description:
         "We craft a tailored strategy, designing solutions and creating prototypes to map out a path to success.",
       content: (
-        <div className="h-full w-full flex items-center justify-center text-white">
+        <motion.div initial="hidden" whileInView="visible" variants={textVariants} className="h-full w-full flex items-center justify-center text-white">
                 <Image
                     src='/hero images/planing.png'
-                    alt="strategy"
+                    alt="planning"
                     layout="fill" // Covers the entire div as a background-like image
                     objectFit="cover" // Ensures the image covers the div properly
                     objectPosition="start" // Centers the image
                     className="z-[-1] w-[300px] h-[300px] " // Puts the image behind the content
                 />
-            </div>
+            </motion.div>
       ),
     },
     {
-      title: "Development",
+      title: "Development and Refinement",
       description:
         "Our team builds and meticulously tests the solution, making adjustments to ensure it aligns perfectly with your needs.",
       content: (
-        <div className="h-full w-full flex items-center justify-center text-white">
+        <motion.div initial="hidden" whileInView="visible" variants={textVariants} className="h-full w-full flex items-center justify-center text-white">
                 <Image
                     src='/hero images/dev.png'
-                    alt="strategy"
+                    alt="dev"
                     layout="fill" // Covers the entire div as a background-like image
                     objectFit="cover" // Ensures the image covers the div properly
                     objectPosition="start" // Centers the image
-                    className="z-[-1] w-[400px] h-[400px] " // Puts the image behind the content
+                    className="z-[-1] w-[300px] h-[300px] " // Puts the image behind the content
                 />
-            </div>
+            </motion.div>
       ),
     },
     {
@@ -63,16 +66,16 @@ const content = [
       description:
         "We launch your solution and provide continuous support, gathering feedback to drive future improvements and ensure lasting impact.",
       content: (
-        <div className="h-full w-full flex items-center justify-center text-white">
+        <motion.div initial="hidden" whileInView="visible" variants={textVariants} className="h-full w-full flex items-center justify-center text-white">
                 <Image
                     src='/hero images/la.png'
-                    alt="strategy"
+                    alt="Launch"
                     layout="fill" // Covers the entire div as a background-like image
                     objectFit="cover" // Ensures the image covers the div properly
                     objectPosition="start" // Centers the image
-                    className="z-[-1] w-[400px] h-[400px] " // Puts the image behind the content
+                    className="z-[-1] w-[300px] h-[300px] " // Puts the image behind the content
                 />
-            </div>
+            </motion.div>
       ),
     },
   ];
@@ -82,8 +85,8 @@ const Process = () => {
   return (
     <div className='p-[30px]'>
         <div className='flex flex-col items-center w-full mb-[30px]'>
-            <h1 className='flex font-bold text-xl sm:text-4xl text-rose-500'>Synwave Solutions</h1>
-            <p className='flex text-lg sm:text-2xl'>Development Workflow</p>
+            <p className='flex text-lg sm:text-2xl'>Our</p>
+            <h1 className='flex font-bold text-xl sm:text-4xl text-rose-500'>Development WorkFlow</h1>
         </div>
 
           <div className='h-[30rem]'>

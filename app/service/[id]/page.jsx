@@ -1,24 +1,26 @@
 import React from 'react'
-import { Dot } from 'lucide-react';
+import { Dot, MessageSquareText, PhoneCall } from 'lucide-react';
 import { Button } from '../../../components/ui/button';
 import Process from '../../../components/Process/Process';
 import { WAD, CSD, MAD, GAI, DevOps, AM, QA, VE } from './info';
 import HoverEffect from '../../../components/ui/card-hover-effect';
+import Link from 'next/link';
+import Consultation from '../../../components/Consultation/Consultation';
 
 
 const Page = ({ params }) => {
   const id = decodeURIComponent(params.id);
   console.log(id);
 
-  let showInfo, vid , pic;
-  if (id == 'Custom Software Development') { showInfo = CSD; vid = '/videos/videoplayback.mp4';pic='https://plus.unsplash.com/premium_photo-1720287601920-ee8c503af775?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' }
-  else if (id == 'Mobile App Development') { showInfo = MAD;vid = '/videos/videoplayback.mp4' }
-  else if (id == 'Web Development') { showInfo = WAD;vid = '/videos/videoplayback.mp4' }
-  else if (id == 'Generative AI') { showInfo = GAI;vid = '/videos/Ai.mp4' }
-  else if (id == 'DevOps') { showInfo = DevOps;vid = '/videos/devops.mp4' }
-  else if (id == 'Video Editing') { showInfo = VE;vid = '/videos/VE.mp4' }
-  else if (id == 'App Maintance') { showInfo = AM;vid = '/videos/AM.mp4' }
-  else if (id == 'Quality Assurance and Testing') { showInfo = QA;vid = '/videos/QA.mp4' }
+  let showInfo, vid, pic;
+  if (id == 'Custom Software Development') { showInfo = CSD; vid = '/videos/videoplayback.mp4'; pic = 'https://plus.unsplash.com/premium_photo-1720287601920-ee8c503af775?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' }
+  else if (id == 'Mobile App Development') { showInfo = MAD; vid = '/videos/videoplayback.mp4' }
+  else if (id == 'Web Development') { showInfo = WAD; vid = '/videos/videoplayback.mp4' }
+  else if (id == 'Generative AI') { showInfo = GAI; vid = '/videos/Ai.mp4' }
+  else if (id == 'DevOps') { showInfo = DevOps; vid = '/videos/devops.mp4' }
+  else if (id == 'Video Editing') { showInfo = VE; vid = '/videos/VE.mp4' }
+  else if (id == 'App Maintance') { showInfo = AM; vid = '/videos/AM.mp4' }
+  else if (id == 'Quality Assurance and Testing') { showInfo = QA; vid = '/videos/QA.mp4' }
 
   const projects = [
     {
@@ -106,17 +108,17 @@ const Page = ({ params }) => {
       {/**Features */}
       <div className='p-[30px] px-[30px] sm:px-[100px] w-full h-[30rem]'>
         <h1 className='font-bold text-3xl my-2'>{showInfo.feat_header}</h1>
-        
+
         <div className='flex justify-between my-[70px]'>
 
-          <img  className=' rounded-lg object-cover w-[700px] h-[400px]' src={showInfo.image}/>
+          <img className=' rounded-lg object-cover w-[700px] h-[400px]' src={showInfo.image} />
           <div>
 
-        <div className="hidden sm:block  max-w-5xl mx-auto px-8">
-          <HoverEffect items={showInfo.features} />
-        </div>
+            <div className="hidden sm:block  max-w-5xl mx-auto px-8">
+              <HoverEffect items={showInfo.features} />
+            </div>
 
-        </div>
+          </div>
         </div>
       </div>
 
@@ -129,7 +131,7 @@ const Page = ({ params }) => {
         <div className='grid grid-cols-1 md:grid-cols-2 gap-[50px]'>
           {showInfo.benefits.map(({ title, description }, key) => {
             return (
-              <div key={key} className='flex flex-col items-start'>
+              <div key={key} className='flex flex-col items-start ml-0 sm:ml-[80px]'>
                 <h2 className='text-md font-bold flex items-center'>
                   <Dot size={'40px'} color='red' /> {title}
                 </h2>
@@ -141,11 +143,16 @@ const Page = ({ params }) => {
       </div>
 
 
-
-
       <div>
         <Process />
       </div>
+
+      <div>
+        <Consultation />
+      </div>
+
+
+
 
     </div>
   );

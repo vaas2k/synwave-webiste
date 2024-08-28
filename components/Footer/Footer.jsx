@@ -2,13 +2,14 @@ import React from 'react'
 import Input from '../ui/input';
 import { Send } from 'lucide-react';
 import { Button } from '../ui/button';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
 
     <>
     <div className='w-full px-4 sm:px-8 lg:px-[60px] py-12 sm:py-10 '>
-      <div className='flex flex-col lg:flex-row justify-center gap-10 lg:gap-16 flex-wrap'>
+      <div className='flex flex-col lg:flex-row justify-center gap-10 lg:gap-[135px] flex-wrap'>
         
         {/* Address Section */}
         <div className='flex flex-col w-full sm:w-auto text-[14px]'>
@@ -72,12 +73,12 @@ const Footer = () => {
         <div className='flex flex-col w-full sm:w-auto'>
           <h1 className="text-lg mb-4">Services and Solutions</h1>
           <ul className='text-sm space-y-2'>
-            <li className='cursor-pointer hover:text-red-500 duration-500'>Custom Software Development</li>
-            <li className='cursor-pointer hover:text-red-500 duration-500'>Mobile App Development</li>
-            <li className='cursor-pointer hover:text-red-500 duration-500'>Web App Development</li>
-            <li className='cursor-pointer hover:text-red-500 duration-500'>Generative AI</li>
-            <li className='cursor-pointer hover:text-red-500 duration-500'>DevOps & CI/CD</li>
-            <li className='cursor-pointer hover:text-red-500 duration-500'>Video Editing</li>
+            <Link href={'/service/Custom Software Development'}><li className='cursor-pointer hover:text-red-500 duration-500'>Custom Software Development</li></Link>
+            <Link href={'/service/Mobile App Development'}><li className='cursor-pointer hover:text-red-500 duration-500'>Mobile App Development</li></Link>
+            <Link href={'/service/Web Development'}><li className='cursor-pointer hover:text-red-500 duration-500'>Web Development</li></Link>
+            <Link href={'/service/Generative AI'}><li className='cursor-pointer hover:text-red-500 duration-500'>Generative AI</li></Link>
+            <Link href={'/service/DevOps'}><li className='cursor-pointer hover:text-red-500 duration-500'>DevOps & CI/CD</li></Link>
+            <Link href={'/service/Video Editing'}><li className='cursor-pointer hover:text-red-500 duration-500'>Video Editing</li></Link>
           </ul>
         </div>
 

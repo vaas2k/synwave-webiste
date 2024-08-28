@@ -23,7 +23,7 @@ export default function MobileNavbar() {
       href: "#",
     },
     {
-        title: "Twitter",
+        title: "Facebook",
         icon: (
           <IconBrandFacebook className="h-full w-full text-neutral-500 dark:text-neutral-300" />
         ),
