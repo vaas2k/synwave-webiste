@@ -35,11 +35,11 @@ export default function StickyScroll  ({
   });
 
   const backgroundColors = [
-    "var(--zinc-800)",
-    "var(--slate-900)",
-    "var(--indigo-950)",
-    "var(--zinc-900)",
-  ];
+    "var(--white)",      // A very light rose shade
+    "var(--slate-100)", // A very light transparent black shade
+    "var(--gray-100)",     // A soft, neutral gray
+    "var(--white)",        // Pure white for a clean look
+];
   const linearGradients = [
     "linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))",
     "linear-gradient(to bottom right, var(--pink-500), var(--indigo-500))",
@@ -66,7 +66,7 @@ export default function StickyScroll  ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-2xl font-bold text-slate-300"
+                className="text-2xl font-bold"
               >
                 {item.title}
               </motion.h2>
@@ -77,7 +77,7 @@ export default function StickyScroll  ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-kg text-slate-300  max-w-sm mt-10"
+                className="text-kg   max-w-sm mt-10"
               >
                 {item.description}
               </motion.p>

@@ -31,7 +31,7 @@ const M_Navbar = () => {
         <div>
             <Sheet>
                 <SheetTrigger>
-                    <AlignJustify color='white' size={'20px'} className="text-gray-800" /> {/* Adjust color for white theme */}
+                    <AlignJustify color='black' size={'20px'} className="text-gray-800" /> {/* Adjust color for white theme */}
                 </SheetTrigger>
                 <SheetContent side={'top'} className="flex flex-col items-start justify-center gap-[30px] flex-col w-full sm:w-[240px] bg-white shadow-lg"> {/* Set background to white */}
                     <SheetTitle>

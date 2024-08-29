@@ -171,10 +171,10 @@ const About = () => {
                 </div>
             </div>
 
-            <div className='text-center w-[80rem] h-[20rem] p-[30px] rounded-lg shadow-sm'
+            <div className='text-center w-full h-[20rem] p-[30px] bg-cover bg-center rounded-lg shadow-sm'
             style={{
                 backgroundImage:
-                    "url('https://images.unsplash.com/photo-1518767279257-af841be2732f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+                    "url('https://images.unsplash.com/photo-1596368257013-42f910ce12af?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
             }}>
             <h1 className='font-bold text-rose-600 text-4xl mb-6 '>Meet our leadership</h1>
             <p className='text-sm sm:text-base leading-relaxed opacity-80 mb-8 px-[120px]'>
@@ -190,10 +190,10 @@ const About = () => {
                 <div className='flex flex-col sm:flex-row gap-12 sm:gap-32 justify-center'>
                     <div className='flex text-center w-72 flex-col items-center p-6'>
                         <img src='/hero images/isb.png' className='object-cover w-24 h-24' />
-                        <h1 className='my-4 text-zinc-700 font-bold text-2xl'>Islamabad Head Office</h1>
+                        <h1 className='my-4 text-zinc-700 font-bold text-xl'>Islamabad</h1>
                         <h1 className='mb-4 text-zinc-700 font-bold text-md opacity-90'>Synwave Solutions Limited</h1>
                         <p className='text-sm'>
-                            731, Street 10 <br />
+                            731, Street 10,
                             i-10<br />
                             Islamabad,
                             Pakistan
@@ -202,10 +202,10 @@ const About = () => {
 
                     <div className='flex text-center w-72 flex-col items-center p-6'>
                         <img src='/hero images/uk.png' className='object-cover w-24 h-24' />
-                        <h1 className='my-4 text-zinc-700 font-bold text-2xl'>England</h1>
+                        <h1 className='my-4 text-zinc-700 font-bold text-xl'>England</h1>
                         <h1 className='mb-4 text-zinc-700 font-bold text-md opacity-90'>Synwave Solutions Limited</h1>
                         <p className='text-sm'>
-                            17 Albert Road <br />
+                            17 Albert Road,
                             Stechford<br />
                             Birmingham,
                             United Kingdom

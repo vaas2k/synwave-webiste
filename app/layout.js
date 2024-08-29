@@ -20,7 +20,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="">
-      <body className={`${jetBrains_Mono.className} min-h-screen flex flex-col`}>
+      <body className={`${signika.className} min-h-screen flex flex-col`}>
         <Navbar />
         <main className="flex-grow">
           {children}

@@ -3,11 +3,14 @@ import { motion } from "framer-motion";
 import React from "react";
 import ImagesSlider from "../ui/image-slider";
 import TypewriterEffect from "../ui/typewriter-effect";
+import Link from "next/link";
 
 export default function Hero() {
   const images = [
-    "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    
+    "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fHw%3D",
+    "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   ];
 
   const words = [
@@ -75,14 +78,19 @@ export default function Hero() {
           </motion.p>
 
           <div className="flex items-center justify-center gap-[20px]">
-            <button className="px-4 py-2 hover:p-[12px] duration-500 backdrop-blur-sm border bg-gray-300/10 hover:bg-rose-300/20 border-gray-100/20 text-white mx-auto text-center rounded-full relative mt-4">
+            
+            <Link href={'/services'}>
+            <button className="px-4 py-2 hover:p-[12px] duration-500 backdrop-blur-sm border bg-gray-300/10 hover:bg-rose-300/20 border-gray-100/20 text-white mx-auto text-center rounded-lg relative mt-4">
               <span>Services</span>
               <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-rose-500 to-transparent" />
             </button>
-            <button className="px-4 py-2 hover:p-[12px] duration-500 backdrop-blur-sm border bg-gray-300/10 hover:bg-rose-300/20 border-gray-100/20 text-white mx-auto text-center rounded-full relative mt-4">
+            </Link>
+            <Link href={'/contact'}>
+            <button className="px-4 py-2 hover:p-[12px] duration-500 backdrop-blur-sm border bg-gray-300/10 hover:bg-rose-300/20 border-gray-100/20 text-white mx-auto text-center rounded-lg relative mt-4">
               <span>Let's Talk</span>
               <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-rose-500 to-transparent" />
             </button>
+            </Link>
           </div>
 
         </motion.div>

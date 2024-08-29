@@ -12,7 +12,7 @@ import {
 import Image from "next/image";
 import { Cog , UserSearch  } from 'lucide-react';
 
-export default function MobileNavbar() {
+export default function Dock() {
   const links = [
     
     {

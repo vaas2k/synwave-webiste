@@ -31,7 +31,6 @@ export function ContactForm() {
         project_details : z.string()
     })
 
-    console.log(formData);
 
     const collectData = (event) => {
         setEmailError('')
@@ -42,7 +41,6 @@ export function ContactForm() {
         e.preventDefault();
         try {
             schema.parse(formData);
-            console.log("Form submitted");
         } catch (error) { 
             if (error instanceof ZodError) {
                 setEmailError(error.errors[0].message);

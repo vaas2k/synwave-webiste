@@ -1,8 +1,11 @@
 import React from 'react'
+import HeroParallaxDemo from '../../components/ourwork/Work';
 
 const Page = () => {
   return (
-    <div>pageP</div>
+    <div>
+      <HeroParallaxDemo />
+    </div>
   )
 }
 

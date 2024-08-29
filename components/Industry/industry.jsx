@@ -1,13 +1,13 @@
 'use client'
-import React from 'react';
+import React, {useEffect} from 'react';
 import { BriefcaseBusiness, Landmark, Hospital, Plane, ActivitySquare, Newspaper, UserCircleIcon, HousePlus, ShoppingBag, TvMinimalPlay, Gamepad, Map } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 1.0 } } // Smooth animation
 };
-
 const containerVariants = {
     visible: {
         transition: {
@@ -15,7 +15,6 @@ const containerVariants = {
         }
     }
 };
-
 const textVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } } // Smooth animation for text
@@ -23,8 +22,6 @@ const textVariants = {
 
 
 export default function Industry() {
-
-
     const icons = [
         { icon: <Landmark size={20} />, title: "Banking & Finance" },
         { icon: <Hospital size={20} />, title: "Health & Medicine" },
@@ -40,14 +37,29 @@ export default function Industry() {
         { icon: <Map size={20} />, title: "Travel" },
     ];
 
+
+    const controls = useAnimation();
+
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.3,
+    });
+
+    useEffect(() => {
+        if (inView) {
+            controls.start('visible');
+        }
+    }, [controls, inView]);
+
     return (
         <div className='relative flex h-auto my-[100px] w-full p-[30px] justify-center flex-col bg-cover bg-center bg-no-repeat'>
             {/* Overlay */}
 
             {/* Content */}
             <motion.div
+                ref={ref}
+                animate={controls}
                 initial="hidden"
-                whileInView={'visible'}
                 variants={textVariants}
                 className='relative z-10 text-center mb-[80px]'>
                 <h1 className="font-bold text-xl sm:text-3xl">Industries Targeted <br /> By </h1>
@@ -56,14 +68,14 @@ export default function Industry() {
 
             {/* Icons Grid */}
             <motion.div
+                animate={controls}
                 initial="hidden"
-                whileInView="visible"
                 variants={containerVariants}
                 className='relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-8 gap-x-6 sm:gap-x-12 justify-center items-start text-left'>
                 {icons.map((val, ind) => (
                     <motion.div
+                        animate={controls}
                         initial="hidden"
-                        whileInView="visible"
                         variants={itemVariants}
                         key={ind} className='flex items-center ml-[80px]'>
                         <div className='bg-white hover:bg-rose-600 duration-500 hover:text-white p-4 rounded-full shadow-lg'>

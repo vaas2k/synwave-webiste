@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { Dot, MessageSquareText, PhoneCall } from 'lucide-react';
 import { Button } from '../../../components/ui/button';
@@ -6,6 +7,30 @@ import { WAD, CSD, MAD, GAI, DevOps, AM, QA, VE } from './info';
 import HoverEffect from '../../../components/ui/card-hover-effect';
 import Link from 'next/link';
 import Consultation from '../../../components/Consultation/Consultation';
+import { motion } from 'framer-motion';
+
+const textVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } } // Smooth animation for text
+};
+
+const featureVariants = {
+  hidden: { opacity: 0, x: 20 },
+  visible: (i) => ({
+    opacity: 1,
+    x: 0,
+    transition: { delay: i * 0.2, duration: 0.5 },
+  }),
+};
+
+const benefitVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.2, duration: 0.5 },
+  }),
+};
 
 
 const Page = ({ params }) => {
@@ -63,10 +88,10 @@ const Page = ({ params }) => {
 
 
   return (
-    <div className='py-[50px] mt-[25px] sm:mt-[40px]'>
+    <div className=''>
 
       {/**Header */}
-      <div className="relative flex items-center justify-center h-[25rem] w-full">
+      <div className="relative flex items-center justify-center h-screen  w-full">
         {/* Background video */}
         <video
           autoPlay
@@ -82,44 +107,56 @@ const Page = ({ params }) => {
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>
 
         {/* Text stays unaffected by the background opacity */}
-        <div className='flex flex-col gap-[20px]  px-[30px] sm:px-[100px]'>
+        <motion.div 
+          initial="hidden" 
+          whileInView="visible"
+          variants={textVariants}
+          className='flex flex-col gap-[20px]  px-[30px] sm:px-[100px]'>
           <h1 className='relative  z-10 text-white text-2xl sm:text-4xl font-bold'>
             {id}
           </h1>
           <p className='z-10 text-gray-300'>{showInfo.info}</p>
           <div className='z-10'>
+          <Link href={'/contact'}>
             <Button
               variant="outline"
               className="flex gap-2 items-center w-[200px] h-[50px] text-white text-md hover:text-white"
-            >
-              Scedule a Meeting
-            </Button></div>
-        </div>
+              >
+              let's Talk Now
+            </Button>
+              </Link> 
+            </div>
+        </motion.div>
       </div>
 
       {/**Description */}
       <div className='p-[30px] px-[30px] sm:px-[100px]'>
-        <h1 className='font-bold text-2xl my-2'>DESCRIPTION</h1>
+        <h1 className='font-bold text-2xl my-2 '>Service <h className="text-rose-500">Description</h></h1>
         <p className=''>
           {showInfo.description}
         </p>
       </div>
 
       {/**Features */}
-      <div className='p-[30px] px-[30px] sm:px-[100px] w-full h-[30rem]'>
-        <h1 className='font-bold text-3xl my-2'>{showInfo.feat_header}</h1>
+      <div className='flex justify-between my-[70px] px-[30px] sm:px-[100px]'>
+        <motion.img
+          initial="hidden"
+          whileInView="visible"
+          src={showInfo.image}
+          alt="Feature Image"
+          className="rounded-lg object-cover w-[700px] h-[400px]"
+          variants={featureVariants}
+        />
 
-        <div className='flex justify-between my-[70px]'>
-
-          <img className=' rounded-lg object-cover w-[700px] h-[400px]' src={showInfo.image} />
-          <div>
-
-            <div className="hidden sm:block  max-w-5xl mx-auto px-8">
-              <HoverEffect items={showInfo.features} />
-            </div>
-
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={featureVariants}
+        >
+          <div className="hidden sm:block max-w-5xl mx-auto px-8">
+            <HoverEffect items={showInfo.features} />
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/**Benefits */}
@@ -129,17 +166,23 @@ const Page = ({ params }) => {
           <h1 className='font-bold text-3xl text-rose-500'>SYNWAVE</h1>
         </div>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-[50px]'>
-          {showInfo.benefits.map(({ title, description }, key) => {
-            return (
-              <div key={key} className='flex flex-col items-start ml-0 sm:ml-[80px]'>
-                <h2 className='text-md font-bold flex items-center'>
-                  <Dot size={'40px'} color='red' /> {title}
-                </h2>
-                <p className='ml-[40px] text-[14px] '>{description}</p>
-              </div>
-            );
-          })}
-        </div>
+  {showInfo.benefits.map(({ title, description }, key) => (
+    <motion.div
+      key={key}
+      initial="hidden"
+      whileInView="visible"
+      custom={key}
+      variants={benefitVariants}
+      className='flex flex-col items-start ml-0 sm:ml-[80px]'
+    >
+      <h2 className='text-md font-bold flex items-center'>
+        <Dot size={'40px'} color='red' /> {title}
+      </h2>
+      <p className='ml-[40px] text-[14px]'>{description}</p>
+    </motion.div>
+  ))}
+</div>
+
       </div>
 
 

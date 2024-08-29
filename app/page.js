@@ -5,6 +5,7 @@ import Consultation from '../components/Consultation/Consultation';
 import S2 from '../components/services/s2';
 import Process from '../components/Process/Process';
 import ChoseUs from '../components/ChoseUs/ChoseUs';
+import Client from '../components/Clients/Client';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
      <Industry />
      <ChoseUs />
      <Process />
+     <Client />
      <Contact />
      <Consultation />
    </div>

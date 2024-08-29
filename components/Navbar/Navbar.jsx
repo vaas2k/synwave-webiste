@@ -11,7 +11,7 @@ import { ChevronDown, PhoneCall } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '../ui/button';
 import M_Navbar from './M-Navbar';
-import MobileNavbar from './Mobile-Navbar';
+import MobileNavbar from './Dock';
 
 const Navbar = () => {
 
@@ -19,16 +19,26 @@ const Navbar = () => {
     const [activeLink, setActiveLink] = useState(pathname);
     const [scrollPosition, setScrollPosition] = useState(0);
 
-    const [landing, setLanding] = useState(true);
+    const paths = [
+        '/service/Custom%20Software%20Development',
+        '/service/Mobile%20App%20Development',
+        '/service/Web%20Development',
+        '/service/Generative%20AI',
+        '/service/DevOps',
+        '/service/Video%20Editing']
 
-    useEffect(() => {
-        setLanding(pathname == '/'  ? true : false);
+        
+        const [landing, setLanding] = useState(true);
+        
+        useEffect(() => {
+        const newPath = paths.find((item) => {return item == pathname ? item : null })
+        setLanding(pathname == '/' || pathname == newPath  ? true : false);
     }, [pathname]);
 
     const services = [
         'Custom Software Development',
         'Mobile App Development',
-        'Web App Development',
+        'Web Development',
         'Generative AI',
         'DevOps',
         'Video Editing',
@@ -53,14 +63,14 @@ const Navbar = () => {
             {/* Desktop Navbar */}
             <div className="hidden sm:block ">
                 <div
-                    className={`flex  items-center justify-between px-[50px] w-full fixed top-0 left-0 z-50 transition-colors duration-300 ${isScrolled || !landing ? 'bg-white text-black' : 'bg-transparent text-white'
+                    className={`flex  items-center justify-between py-[10px] px-[50px] w-full fixed top-0 left-0 z-50 transition-colors duration-300 ${isScrolled || !landing ? 'bg-white text-black' : 'bg-transparent text-white'
                         }`}
                 >
                     <Link href="/">
                         <div className="flex">
                                 <img
-                                    src="/logos/new black.png"
-                                    className="h-[40px] my-[10px]"
+                                    src={isScrolled || !landing ? "/logos/new black.png" : "/logos/new white.png"}
+                                    className={isScrolled || !landing ? "h-[30px]" : "h-[33px] my-[10px]"}
                                     alt="Synwave"
                                 />                               
                         </div>
@@ -161,17 +171,16 @@ const Navbar = () => {
             {/* Mobile Navbar */}
             <div className="block sm:hidden">
                 <div
-                    className={`flex items-center justify-between px-[20px] w-full fixed top-0 left-0 z-50 transition-colors duration-300 ${isScrolled || !landing ? 'bg-zinc-950 text-white' : 'bg-transparent text-white'
+                    className={`flex items-center justify-between px-[20px] w-full fixed top-0 left-0 z-50 transition-colors duration-300 ${isScrolled || !landing ? 'bg-white text-black' : 'bg-transparent text-white'
                         }`}
                 >
                     <Link href="/">
                         <div className="flex">
-                             <img
-                            src="/logos/white.png"
-                            className="w-[75px] h-[75px]"
-                            alt="Synwave"
-                            />
-                         
+                                <img
+                                    src={isScrolled || !landing ? "/logos/black.png" : "/logos/white.png"}
+                                    className={'w-[70px] h-[70px]'}
+                                    alt="Synwave"
+                                />                               
                         </div>
                     </Link>
 
