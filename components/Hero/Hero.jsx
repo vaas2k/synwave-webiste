@@ -87,7 +87,7 @@ export default function Hero() {
             </Link>
             <Link href={'/contact'}>
             <button className="px-4 py-2 hover:p-[12px] duration-500 backdrop-blur-sm border bg-gray-300/10 hover:bg-rose-300/20 border-gray-100/20 text-white mx-auto text-center rounded-lg relative mt-4">
-              <span>Let's Talk</span>
+              <span>Let&apos;s Talk</span>
               <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-rose-500 to-transparent" />
             </button>
             </Link>

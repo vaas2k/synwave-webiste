@@ -75,7 +75,7 @@ const About = () => {
                     variants={textVariants} className='flex flex-col items-start sm:w-1/2 px-[40px] sm:px-[150px]'>
                     <h1 className='font-bold text-rose-600 text-5xl mb-6 w-full sm:w-[700px]'>Synwave at a Glance</h1>
                     <p className='text-sm sm:text-base leading-relaxed opacity-80 mb-8'>
-                        At Synwave, we merge creativity with technology to deliver custom software solutions that drive growth. Whether you're a startup or an established business, we’re here to turn your vision into reality with excellence and a forward-thinking approach.
+                        At Synwave, we merge creativity with technology to deliver custom software solutions that drive growth. Whether you&apos;re a startup or an established business, we&apos;re here to turn your vision into reality with excellence and a forward-thinking approach.
                     </p>
                 </motion.div>
                 <div className='relative sm:w-1/2 flex flex-col items-end gap-[40px] sm:gap-[10px] mt-0 sm:mt-[-50px]'>
@@ -85,6 +85,7 @@ const About = () => {
                         'https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
                     ].map((src, i) => (
                         <motion.img
+                            alt='Image'
                             key={i}
                             custom={i}
                             initial="hidden"

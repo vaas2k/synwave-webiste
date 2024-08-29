@@ -7,7 +7,7 @@ const Page = () => {
   return (
     <div className='flex flex-col mt-[140px] gap-[20px]'>
       <div className='text-center'>
-        <h1 className='font-extrabold text-zinc-900 text-xl sm:text-5xl mb-[15px]'>Let's discuss your project</h1>
+        <h1 className='font-extrabold text-zinc-900 text-xl sm:text-5xl mb-[15px]'>Let&apos;s discuss your project</h1>
         <p className='text-zinc-900 opacity-80 text-[12px] sm:text-sm'>We are committed to understanding your requirements and crafting a tailored solution that aligns with your goals.</p>
       </div>
 

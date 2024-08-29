@@ -122,7 +122,7 @@ const Page = ({ params }) => {
               variant="outline"
               className="flex gap-2 items-center w-[200px] h-[50px] text-white text-md hover:text-white"
               >
-              let's Talk Now
+              let&apos;s Talk Now
             </Button>
               </Link> 
             </div>

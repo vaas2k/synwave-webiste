@@ -3,6 +3,8 @@ import  FloatingDock  from "../ui/floating-dock";
 import {
     IconBrandFacebook,
   IconBrandGithub,
+  IconBrandInstagram,
+  IconBrandLinkedin,
   IconBrandX,
   IconExchange,
   IconHome,
@@ -23,16 +25,16 @@ export default function Dock() {
       href: "#",
     },
     {
-        title: "Facebook",
+        title: "Instagram",
         icon: (
-          <IconBrandFacebook className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+          <IconBrandInstagram className="h-full w-full text-neutral-500 dark:text-neutral-300" />
         ),
-        href: "#",
+        href: "https://www.instagram.com/synwave.official/",
     },
     {
-      title: "GitHub",
+      title: "LinkedIn",
       icon: (
-        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#",
     },

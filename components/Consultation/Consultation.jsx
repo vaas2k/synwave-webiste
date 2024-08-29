@@ -49,7 +49,7 @@ const Consultation = () => {
             Book a free consultation with our experts today
           </h1>
           <p className="text-center italic text-zinc-950 text-sm sm:text-md opacity-90 my-[20px] ">
-            Unlock your business's potential with advanced technologies, expert advice, and dedicated support tailored to your success.
+            Unlock your business&apos;s potential with advanced technologies, expert advice, and dedicated support tailored to your success.
           </p>
         </motion.div>
 
