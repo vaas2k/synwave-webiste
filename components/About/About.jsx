@@ -72,9 +72,9 @@ const About = () => {
                 <motion.div 
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={'visible'}
-                    variants={textVariants} className='flex flex-col items-start sm:w-1/2 px-[40px] sm:px-[150px]'>
-                    <h1 className='font-bold text-rose-600 text-5xl mb-6 w-full sm:w-[700px]'>Synwave at a Glance</h1>
-                    <p className='text-sm sm:text-base leading-relaxed opacity-80 mb-8'>
+                    variants={textVariants} className='flex flex-col items-start sm:w-1/2 px-[40px] sm:px-[130px]'>
+                    <h1 className='font-bold text-rose-600 text-5xl mb-6 w-full sm:w-[500px] text-center'>Synwave at a Glance</h1>
+                    <p className='text-sm sm:text-base leading-relaxed opacity-80 mb-8 text-center'>
                         At Synwave, we merge creativity with technology to deliver custom software solutions that drive growth. Whether you&apos;re a startup or an established business, we&apos;re here to turn your vision into reality with excellence and a forward-thinking approach.
                     </p>
                 </motion.div>
@@ -172,13 +172,13 @@ const About = () => {
                 </div>
             </div>
 
-            <div className='text-center w-full h-[20rem] p-[30px] bg-cover bg-center rounded-lg shadow-sm'
+            <div className='flex flex-col items-center justify-center text-center w-full h-full sm:h-[20rem] p-[30px] bg-cover bg-center rounded-lg shadow-sm'
             style={{
                 backgroundImage:
                     "url('https://images.unsplash.com/photo-1596368257013-42f910ce12af?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
             }}>
             <h1 className='font-bold text-rose-600 text-4xl mb-6 '>Meet our leadership</h1>
-            <p className='text-sm sm:text-base leading-relaxed opacity-80 mb-8 px-[120px]'>
+            <p className='text-sm sm:text-base leading-relaxed opacity-80 mb-8 px-0 sm:px-[120px]'>
             Meet the driving force, the dreamers, the minds behind crafting a 
             cutting-edge software development company, aka, SynSols.
             </p>

@@ -15,39 +15,19 @@ export default function Hero() {
 
   const words = [
     {
-      text: "Forging",
+      text: "Transforming  ",
     },
     {
-      text: "Next-Gen",
+      text: "Ideas ",
     },
     {
-      text: "Software",
+      text: "into  ",
     },
     {
-      text: "for",
+      text: "Digital  ",
     },
     {
-      text : "a"
-    },
-    {
-      text : "Bold"
-    },
-    {
-      text : "New"
-    },
-    {
-      text : "Era"
-    },
-    {
-      text : "at"
-    },
-    {
-      text: " 'Synwave ",
-      className: "text-rose-500 dark:text-rose-500",
-    },
-    {
-      text: " Solutions'",
-      className: "text-rose-500 dark:text-rose-500",
+      text : "Realities"
     }
   ];
 
@@ -71,8 +51,8 @@ export default function Hero() {
           <motion.p className="md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-rose-800 py-4">
             <div className="flex flex-col items-center justify-center h-[10rem] w-[300px] sm:w-[900px]">
               <TypewriterEffect words={words} />
-              <p className="text-white dark:text-neutral-200 text-base text-sm sm:text-md  mt-10 mb-10">
-                We harness cutting-edge AI technology to deliver top-quality solutions, on time and within budget.
+              <p className="text-white dark:text-neutral-200 text-base text-sm sm:text-[15px] italic  mt-10 mb-10">
+              Synwave turns visionary concepts into tangible innovations that shape the future.
               </p>
             </div>
           </motion.p>

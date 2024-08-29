@@ -111,7 +111,7 @@ export default function ImagesSlider ({
   return (
     <div
       className={cn(
-        "overflow-hidden h-full w-full relative flex items-center justify-center",
+        "overflow-hidden h-full w-full relative flex items-center justify-center bg-black",
         className
       )}
       style={{
