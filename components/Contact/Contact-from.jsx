@@ -6,8 +6,18 @@ import TextArea from "../ui/Ace-textarea";
 import Select from "../ui/Ace-select";
 import { cn } from "../../lib/utils";
 import { z, ZodError } from 'zod'
+import { Axis3D, Loader } from "lucide-react";
+import axios, { AxiosError } from "axios";
+import { Button } from "../ui/button";
+
+
 
 export function ContactForm() {
+
+    const [emailError , setEmailError] = useState('');
+    const [subError , setSubError] = useState(false);
+    const [rateError , setRateError] = useState(false);
+    const [loading ,setLoading] = useState(false);
 
     const [formData,  setFormData ] = useState({
         first_name : "",
@@ -18,9 +28,6 @@ export function ContactForm() {
         service : "",
         project_details : ""
     })
-
-    const [emailError , setEmailError] = useState('');
-
     const schema = z.object({
         first_name : z.string(),
         last_name : z.string(),
@@ -34,18 +41,35 @@ export function ContactForm() {
 
     const collectData = (event) => {
         setEmailError('')
+        setSubError(false)
         setFormData({ ...formData, [event.target.name]: event.target.value });
      }
 
-    const handleSubmit = (e) => {
+    const handleSubmit =  async (e) => {
         e.preventDefault();
+        setSubError(false);
+        setLoading(true);
+        setRateError(false);
         try {
+
             schema.parse(formData);
+            const req = await axios.post('/api/form',formData);
+            if(req.status == 200) { 
+                console.log(req.status);
+                setLoading(false);
+            }
         } catch (error) { 
+            setLoading(false);
             if (error instanceof ZodError) {
                 setEmailError(error.errors[0].message);
             } else {
                 console.error(error);
+            }
+            if(error instanceof AxiosError) { 
+                console.log(error.response.data);
+                if(error.response.data.msg == 'Email limit exceeded') { 
+                     setRateError(true);
+                }
             }
         }
     };
@@ -106,12 +130,15 @@ export function ContactForm() {
                     <TextArea name='project_details' value={formData.project_details} onChange={collectData} className="h-[90px]" id="project" placeholder="..." type="textarea" />
                 </LabelInputContainer>
 
-                <button
+                {subError && <p className="text-rose-600 text-center my-[20px]">Server Error</p>}
+                {rateError && <p className="text-rose-600 text-center my-[20px]">Email limit exceeded</p>}
+                
+                <Button
                     className="bg-gradient-to-br relative group/btn from-zinc-950 dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
                     type="submit">
-                    Submit &rarr;
+                    {loading ? <h className="animate-spin flex justify-center"><Loader/></h> : 'Submit'}
                     <BottomGradient />
-                </button>
+                </Button>
 
             </form>
         </div>)

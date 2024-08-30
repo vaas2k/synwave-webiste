@@ -26,13 +26,13 @@ const controls = useAnimation();
     }, [controls, inView]);
     return (
         <div className=''>
-            <div className='flex items-center justify-center pt-[100px] flex-col '>
+            <div className='flex items-center justify-center pt-[20px] flex-col '>
                 <motion.div 
                  ref={ref}
                  initial="hidden" animate={controls} variants={textVariants}
                  className='text-center pb-[30px] w-[300px] sm:w-[900px]'>
                     <h1 className='text-lg sm:text-2xl font-bold'> From Concept to Completeion,</h1>
-                    <h1 className='text-xl sm:text-4xl text-rose-500 pl-[15px] font-bold'>We deliver Full-Stack Expertise.</h1>
+                    <h1 className='text-xl sm:text-5xl text-rose-500 pl-[15px] font-bold'>We deliver Full-Stack Expertise.</h1>
                 </motion.div>
                 <motion.div
                 initial="hidden" animate={controls} variants={textVariants}>

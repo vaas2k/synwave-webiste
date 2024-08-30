@@ -25,9 +25,12 @@ export default function Hero() {
     },
     {
       text: "Digital  ",
+      className :'text-rose-500 font-bold'
     },
     {
-      text : "Realities"
+      text : "Realities",
+      className :'text-rose-500 font-bold'
+
     }
   ];
 
@@ -51,7 +54,7 @@ export default function Hero() {
           <motion.p className="md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-rose-800 py-4">
             <div className="flex flex-col items-center justify-center h-[10rem] w-[300px] sm:w-[900px]">
               <TypewriterEffect words={words} />
-              <p className="text-white dark:text-neutral-200 text-base text-sm sm:text-[15px] italic  mt-10 mb-10">
+              <p className="text-white dark:text-neutral-200 text-base text-sm sm:text-[19px] italic  mt-10 mb-10">
               Synwave turns visionary concepts into tangible innovations that shape the future.
               </p>
             </div>

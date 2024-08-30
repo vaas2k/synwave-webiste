@@ -13,7 +13,7 @@ export default function HoverEffect ({
 
   return (
     (<div
-      className={cn("grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-x-[20px] gap-y-[80px]", className)}>
+      className={cn("grid grid-cols-1 md:grid-cols-3  lg:grid-cols-3 gap-x-[20px] gap-y-[80px]", className)}>
       {items.map((item, idx) => (
         <Link
           href={'/'}
@@ -38,7 +38,7 @@ export default function HoverEffect ({
             )}
           </AnimatePresence>
           <Card className={'flex items-center justify-center bg-transparent duration-500 hover:text-white'}>
-            <CardTitle className={'flex item-center text-zinc-900  font-bold text-[14px] gap-[10px]'}>  <CircleCheck color="red" size={'30px'}/> {item}</CardTitle>
+            <CardTitle className={'flex item-center text-zinc-900  font-bold text-[14px]'}>  <CircleCheck color="red" size={'30px'}/> {item}</CardTitle>
           </Card>
         </Link>
       ))}

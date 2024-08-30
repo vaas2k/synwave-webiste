@@ -42,7 +42,7 @@ const Client = () => {
           initial="hidden"
           animate={controls}
           variants={textVariant}
-          className='text-center font-bold text-2xl sm:text-4xl text-rose-500'
+          className='text-center font-bold text-2xl sm:text-5xl text-rose-500'
         >
           What Clients Say
         </motion.h1>

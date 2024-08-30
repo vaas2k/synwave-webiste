@@ -61,48 +61,48 @@ const About = () => {
     };
 
     return (
-        <div ref={ref} className='flex flex-col items-center  '>
-            
-            <div className='flex flex-col h-screen sm:flex-row items-center bg-opacity-50 bg-cover overflow-hidden  sm:mt-[-60px]'
+        <div ref={ref} className='flex flex-col items-center'>
+            <div className='flex flex-col h-screen sm:flex-row items-center bg-opacity-50 bg-cover overflow-hidden sm:mt-[-60px]'
                 style={{
                     backgroundImage:
                         "url('https://images.unsplash.com/photo-1518767279257-af841be2732f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
                 }}
             >
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={'visible'}
-                    variants={textVariants} className='flex flex-col items-start sm:w-1/2 px-[40px] sm:px-[130px]'>
-                    <h1 className='font-bold text-rose-600 text-5xl mb-6 w-full sm:w-[500px] text-center'>Synwave at a Glance</h1>
-                    <p className='text-sm sm:text-base leading-relaxed opacity-80 mb-8 text-center'>
+                    variants={textVariants}
+                    className='flex flex-col items-center sm:items-start sm:w-1/2 px-6 sm:px-[130px] text-center sm:text-left '
+                >
+                    <h1 className='font-bold text-rose-600 text-4xl sm:text-5xl mb-6 w-full sm:w-[500px]'>Synwave at a Glance</h1>
+                    <p className='text-sm sm:text-base leading-relaxed opacity-80 mb-8'>
                         At Synwave, we merge creativity with technology to deliver custom software solutions that drive growth. Whether you&apos;re a startup or an established business, we&apos;re here to turn your vision into reality with excellence and a forward-thinking approach.
                     </p>
                 </motion.div>
-                <div className='relative sm:w-1/2 flex flex-col items-end gap-[40px] sm:gap-[10px] mt-0 sm:mt-[-50px]'>
-                    {[ // array of image sources
+                <div className='relative sm:w-1/2 flex flex-col items-center sm:items-end mt-[-50px] gap-4   '>
+                    {[
                         'https://images.unsplash.com/photo-1531973576160-7125cd663d86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                         'https://images.unsplash.com/photo-1606857521015-7f9fcf423740?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                         'https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
                     ].map((src, i) => (
                         <motion.img
-                            alt='Image'
-                            key={i}
-                            custom={i}
-                            initial="hidden"
-                            animate="visible"
-                            variants={imageVariants}
-                            src={src}
-                            className={`h-[10rem] sm:h-[15rem] w-full sm:w-[28rem] object-cover rounded-lg shadow-lg transform 
-                ${i % 2 === 0 ? 'ml-[2rem]' : 'ml-[2rem] mr-3 sm:mr-[10rem]'} 
-                ${i === 1 ? 'mt-[-4rem]' : i === 2 ? 'mt-[-4rem]' : ''}`}
-                        />
+                        alt='Image'
+                        key={i}
+                        custom={i}
+                        initial="hidden"
+                        animate="visible"
+                        variants={imageVariants}
+                        src={src}
+                        className={`h-[10rem] sm:h-[15rem] w-full sm:w-[28rem] object-cover rounded-lg shadow-lg transform 
+                        ${i % 2 === 0 ? 'ml-[2rem]' : 'ml-[2rem] mr-3 sm:mr-[10rem]'} 
+                          ${i === 1 ? 'mt-[-4rem]' : i === 2 ? 'mt-[-4rem]' : ''}`}
+                      />
                     ))}
                 </div>
             </div>
 
-
-            <div className='flex flex-col items-center justify-center gap-12 sm:px-[125px] w-full my-24 '>
-                <div className='flex flex-col gap-10 text-start p-6 w-full rounded-lg'>
+            <div className='flex flex-col items-center justify-center gap-12 px-6 sm:px-[125px] w-full my-24'>
+                <div className='flex flex-col gap-10 text-start w-full p-6 rounded-lg'>
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={'visible'}
@@ -138,7 +138,7 @@ const About = () => {
                         <h1 className='font-bold text-rose-600 text-4xl mb-6'>Values</h1>
 
                         {list.map((item, idx) => (
-                            <div key={idx} >
+                            <div key={idx}>
                                 <div
                                     className='flex my-8 items-center gap-4 cursor-pointer'
                                     onClick={() => toggleList(item.title)}
@@ -154,9 +154,9 @@ const About = () => {
                                 </div>
 
                                 {showList === item.title && (
-                                    <div className='flex flex-col sm:flex-row italic opacity-90 text-center items-center justify-between gap-6'>
+                                    <div className='flex flex-col sm:flex-row italic opacity-90 text-center sm:text-left items-center justify-between gap-6'>
                                         <motion.p
-                                            className='ml-8 w-full sm:w-[400px] text-left'
+                                            className='ml-8 w-full sm:w-[400px]'
                                             initial={{ opacity: 0, height: 0 }}
                                             animate={{ opacity: 1, height: 'auto' }}
                                             transition={{ duration: 0.5 }}
@@ -172,17 +172,17 @@ const About = () => {
                 </div>
             </div>
 
-            <div className='flex flex-col items-center justify-center text-center w-full h-full sm:h-[20rem] p-[30px] bg-cover bg-center rounded-lg shadow-sm'
-            style={{
-                backgroundImage:
-                    "url('https://images.unsplash.com/photo-1596368257013-42f910ce12af?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
-            }}>
-            <h1 className='font-bold text-rose-600 text-4xl mb-6 '>Meet our leadership</h1>
-            <p className='text-sm sm:text-base leading-relaxed opacity-80 mb-8 px-0 sm:px-[120px]'>
-            Meet the driving force, the dreamers, the minds behind crafting a 
-            cutting-edge software development company, aka, SynSols.
-            </p>
-            <Button className="bg-rose-600">See Our Team</Button>
+            <div className='flex flex-col items-center justify-center text-center w-full h-auto sm:h-[20rem] p-6 sm:p-[30px] bg-cover bg-center rounded-lg shadow-sm'
+                style={{
+                    backgroundImage:
+                        "url('https://images.unsplash.com/photo-1596368257013-42f910ce12af?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+                }}>
+                <h1 className='font-bold text-rose-600 text-4xl mb-6'>Meet our leadership</h1>
+                <p className='text-sm sm:text-base leading-relaxed opacity-80 mb-8 px-0 sm:px-[120px]'>
+                    Meet the driving force, the dreamers, the minds behind crafting a
+                    cutting-edge software development company, aka, SynSols.
+                </p>
+                <Button className="bg-rose-600">See Our Team</Button>
             </div>
 
             <div className='text-center my-12 sm:my-32 px-6 sm:px-12'>
@@ -217,7 +217,7 @@ const About = () => {
 
 
 
-           
+
         </div>
     )
 }

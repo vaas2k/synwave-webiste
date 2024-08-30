@@ -3,6 +3,7 @@ import S1 from './s1';
 import S2 from './s2';
 import Process from '../Process/Process';
 import ChoseUs from '../ChoseUs/ChoseUs';
+import TechStack from '../TechStack/TechStack';
 
 const Services = () => {
   return (
@@ -11,6 +12,7 @@ const Services = () => {
       <S2 />
       <ChoseUs />
       <Process />
+      <TechStack/>
     </div>
   )
 }

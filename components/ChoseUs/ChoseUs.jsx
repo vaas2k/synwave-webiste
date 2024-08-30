@@ -62,13 +62,13 @@ const ChoseUs = () => {
   ];
 
   return (
-    <div className='flex flex-col justify-center px-[30px] sm:px-[30px] my-[50px]'>
+    <div className='flex flex-col justify-center px-8 sm:px-12 my-12'>
       <motion.div
         initial="hidden"
         animate={controls}
         variants={textVariants}
         ref={ref}
-        className='text-center mb-[80px]'
+        className='text-center mb-20'
       >
         <h1 className="font-bold text-xl sm:text-3xl">Why Choose</h1>
         <h2 className="text-rose-500 text-2xl sm:text-5xl font-extrabold">Synwave Solutions</h2>
@@ -78,18 +78,18 @@ const ChoseUs = () => {
         initial="hidden"
         animate={controls}
         variants={containerVariants}
-        className='flex flex-col sm:flex-row items-center justify-center gap-[40px] px-[40px]'
+        className='flex flex-wrap justify-center gap-8'
       >
         {data.map((item, ind) => (
           <motion.div
             key={ind}
             variants={itemVariants}
-            className='flex flex-col items-center gap-[20px] shadow-lg rounded-lg w-[300px] p-[30px]'
+            className='flex flex-col items-center gap-4 shadow-lg rounded-xl w-full sm:w-[300px] p-6 sm:p-8 h-[18rem] flex-grow'
           >
-            {item.icon}
+            <div className="text-rose-500">{item.icon}</div>
             <div className='text-center'>
-              <h1 className='text-rose-500 text-sm sm:text-lg font-extrabold mb-4'>{item.title}</h1>
-              <p className='text-sm'>{item.description}</p>
+              <h1 className='text-rose-500 text-lg sm:text-xl font-extrabold mb-4'>{item.title}</h1>
+              <p className='text-sm sm:text-base'>{item.description}</p>
             </div>
           </motion.div>
         ))}

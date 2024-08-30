@@ -26,7 +26,8 @@ const Navbar = () => {
         '/service/Generative%20AI',
         '/service/DevOps',
         '/service/Video%20Editing',
-        '/service/App%20Maintance']
+        '/service/App%20Maintance',
+        "/service/Quality%20Assurance%20and%20Testing"]
 
         
         const [landing, setLanding] = useState(true);

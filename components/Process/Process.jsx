@@ -83,10 +83,10 @@ const content = [
 
 const Process = () => {
   return (
-    <div className='p-[30px]'>
+    <div className='p-[30px] mt-[60px]'>
         <div className='flex flex-col items-center w-full mb-[30px]'>
-            <p className='flex text-lg sm:text-2xl'>Our</p>
-            <h1 className='flex font-bold text-xl sm:text-4xl text-rose-500'>Development WorkFlow</h1>
+            <p className='flex text-lg sm:text-4xl'>Our</p>
+            <h1 className='flex font-bold text-xl sm:text-5xl text-rose-500'>Development WorkFlow</h1>
         </div>
 
           <div className='h-[30rem]'>

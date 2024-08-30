@@ -35,11 +35,11 @@ const S1 = () => {
           initial={{ opacity: 0, y: 10 }}
           whileInView={'visible'}
           variants={textVariants} className='flex flex-col items-start sm:w-1/2 px-[40px] sm:px-[100px]'>
-          <div className="text-5xl text-center mx-auto text-neutral-600 dark:text-white pb-[30px] relative z-10">
+          <div className="text-5xl text-start mx-auto text-neutral-600 dark:text-white pb-[30px] relative z-10">
             Build
             <FlipWords words={words} className='pl-[20px]' />Products with us
           </div>
-          <p className='text-sm text-center sm:text-base leading-relaxed opacity-80 mb-8'>
+          <p className='text-sm text-start sm:text-base leading-relaxed opacity-80 mb-8'>
             You can trust that our experienced team will deliver high-quality solutions that
             meet your business goals, drive growth, and provide a competitive edge in the digital
             landscape.
