@@ -32,7 +32,7 @@ const Client = () => {
       <div ref={ref}>
         <motion.div
           initial="hidden"
-          animate={controls}
+          whileInView={"visible"}
           variants={textVariant}
           className='flex items-center justify-center my-[10px] p-[20px]'
         >
@@ -40,7 +40,7 @@ const Client = () => {
         </motion.div> 
         <motion.h1
           initial="hidden"
-          animate={controls}
+          whileInView={"visible"}
           variants={textVariant}
           className='text-center font-bold text-2xl sm:text-5xl text-rose-500'
         >
@@ -48,7 +48,7 @@ const Client = () => {
         </motion.h1>
         <motion.p
           initial="hidden"
-          animate={controls}
+          whileInView={"visible"}
           variants={textVariant}
           className='text-center text-sm sm:text-md my-[20px] italic'
         >
@@ -59,7 +59,7 @@ const Client = () => {
       <div className='flex flex-col sm:flex-row items-center justify-center gap-[100px] mt-[50px]'>
         <motion.div
           initial="hidden"
-          animate={controls}
+          whileInView={"visible"}
           variants={textVariant}
           className='flex flex-col items-center w-[300px] sm:w-[400px] text-[12px]'
         >
@@ -73,7 +73,7 @@ const Client = () => {
 
         <motion.div
           initial="hidden"
-          animate={controls}
+          whileInView={"visible"}
           variants={textVariant}
           className='flex flex-col items-center w-[300px] sm:w-[400px] text-[12px]'
         >
@@ -87,7 +87,7 @@ const Client = () => {
 
         <motion.div
           initial="hidden"
-          animate={controls}
+          whileInView={"visible"}
           variants={textVariant}
           className='flex flex-col items-center w-[300px] sm:w-[400px] text-[12px]'
         >

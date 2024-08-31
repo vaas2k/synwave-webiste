@@ -179,8 +179,7 @@ const About = () => {
                 }}>
                 <h1 className='font-bold text-rose-600 text-4xl mb-6'>Meet our leadership</h1>
                 <p className='text-sm sm:text-base leading-relaxed opacity-80 mb-8 px-0 sm:px-[120px]'>
-                    Meet the driving force, the dreamers, the minds behind crafting a
-                    cutting-edge software development company, aka, SynSols.
+                Meet the driving force, the visionaries, the brains behind shaping Synwave Solutions into a cutting-edge software development company.
                 </p>
                 <Button className="bg-rose-600">See Our Team</Button>
             </div>

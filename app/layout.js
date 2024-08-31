@@ -2,6 +2,7 @@ import { Inter,Signika,Dangrek,Revalia,Ubuntu_Mono,Trispace,Martian_Mono,JetBrai
 import "./globals.css";
 import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer/Footer'
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 const signika = Signika({subsets:['latin'],weight:'400'});
@@ -20,6 +21,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="">
+      <Head>
+      <link rel="apple-touch-icon" sizes="180x180" href="/icon.ico"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/icon.ico"/>
+<link rel="icon" type="image/png" sizes="16x16" href="/icon.ico"/>
+<link rel="manifest" href="/icon.ico"/>
+<link rel="mask-icon" href="/icon.ico" color="#5bbad5"/>
+<meta name="msapplication-TileColor" content="#da532c"/>
+<meta name="theme-color" content="#ffffff"/>
+      </Head>
+
       <body className={`${signika.className} min-h-screen flex flex-col`}>
         <Navbar />
         <main className="flex-grow">

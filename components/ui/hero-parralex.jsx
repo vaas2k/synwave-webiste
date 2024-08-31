@@ -65,9 +65,8 @@ export const Header = () => {
       Crafting Tomorrow <br /> One Innovation at a Time
       </h1>
       <p className="max-w-2xl text-base md:text-md mt-8 dark:text-neutral-200">
-        We build beautiful products with the latest technologies and frameworks.
-        We are a team of passionate developers and designers that love to build
-        amazing products.
+        
+We build breathtaking products powered by the latest technologies and frameworks. Our team of passionate developers and visionary designers is obsessed with creating extraordinary experiences that leave a lasting impact.
       </p>
     </div>)
   );

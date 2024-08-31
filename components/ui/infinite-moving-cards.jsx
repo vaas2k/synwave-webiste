@@ -86,7 +86,7 @@ export default function InfiniteMovingCards ({
             style={{
               background: "",
             }}
-            key={item.name}
+            key={idx}
           >
             <div
               aria-hidden="true"
@@ -94,7 +94,6 @@ export default function InfiniteMovingCards ({
             ></div>
             <img
               src={`https://skillicons.dev/icons?i=${item}`}
-              className="shadow-lg"
             />
           </li>
         ))}

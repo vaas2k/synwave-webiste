@@ -65,7 +65,7 @@ const ChoseUs = () => {
     <div className='flex flex-col justify-center px-8 sm:px-12 my-12'>
       <motion.div
         initial="hidden"
-        animate={controls}
+        whileInView={"visible"}
         variants={textVariants}
         ref={ref}
         className='text-center mb-20'
@@ -76,7 +76,7 @@ const ChoseUs = () => {
 
       <motion.div
         initial="hidden"
-        animate={controls}
+        whileInView={"visible"}
         variants={containerVariants}
         className='flex flex-wrap justify-center gap-8'
       >

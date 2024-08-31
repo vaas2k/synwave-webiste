@@ -29,13 +29,13 @@ const controls = useAnimation();
             <div className='flex items-center justify-center pt-[20px] flex-col '>
                 <motion.div 
                  ref={ref}
-                 initial="hidden" animate={controls} variants={textVariants}
+                 initial="hidden" whileInView={"visible"} variants={textVariants}
                  className='text-center pb-[30px] w-[300px] sm:w-[900px]'>
                     <h1 className='text-lg sm:text-2xl font-bold'> From Concept to Completeion,</h1>
                     <h1 className='text-xl sm:text-5xl text-rose-500 pl-[15px] font-bold'>We deliver Full-Stack Expertise.</h1>
                 </motion.div>
                 <motion.div
-                initial="hidden" animate={controls} variants={textVariants}>
+                initial="hidden" whileInView={"visible"} variants={textVariants}>
                     <p className='sm:w-[700px] w-[300px] text-[12px] sm:text-sm flex text-center pb-[30px]'>
                         We follow a structured approach for web and mobile development,
                         with planning, testing, and execution stages. We work with clients

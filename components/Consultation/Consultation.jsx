@@ -65,7 +65,6 @@ const Consultation = () => {
           >
             <Button className="flex gap-2 bg-rose-600 items-center w-40 sm:w-48 lg:w-52 h-10 sm:h-12 lg:h-14 text-sm sm:text-md lg:text-lg hover:text-white">
               Schedule a Meeting
-              <MessageSquareText size={"18px"} />
             </Button>
           </motion.div>
         </Link>

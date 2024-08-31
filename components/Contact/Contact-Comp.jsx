@@ -38,7 +38,7 @@ const Contact = () => {
                 <h1 className="text-xl sm:text-4xl dark:text-white animate-fadeIn">Discuss with our experts!</h1>
                 <h1 className="text-xl sm:text-4xl text-center mb-[30px] dark:text-white animate-fadeIn delay-150">Let us help you build the solution</h1>
                 <p className='sm:w-[500px] w-[300px] lg:w-[500px] text-sm lg:text-base text-start pb-[30px] mt-[10px] animate-fadeIn delay-300'>
-                    With advanced tools like ChatGPT and CoPilot, software development is evolving faster than ever. <br />
+                    With advanced tools like ChatGPT , CoPilot and Cursor, software development is evolving faster than ever. <br />
                     We ensure a positive impact on your project or we’ll continue working at no additional cost until we achieve it.
                 </p>
             </motion.div>
