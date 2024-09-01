@@ -1,13 +1,66 @@
-import React from 'react'
+'use client'
+import React, {useState} from 'react'
 import Input from '../ui/input';
 import { Send } from 'lucide-react';
 import { Button } from '../ui/button';
 import Link from 'next/link';
+import axiso,{ AxiosError } from 'axios';
+import axios from 'axios';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Footer = () => {
+
+  const [email , setEmail] = useState('');
+  const [loading , setLoading] = useState(false);
+  async function emailSubscriber (e) { 
+    try{
+
+      if(email) {
+        setLoading(true);
+        const req = await axios.post('/api/emailSub',{email : email});
+        if(req.status == 200) {
+          console.log('Success');
+          toast('Subscribed', {
+            duration: 3000,
+            position: 'top-center',
+          
+            // Styling
+            style: {},
+            className: '',
+          
+            // Custom Icon
+            icon: '❤️',
+          
+            // Change colors of success/error/loading icon
+            iconTheme: {
+              primary: '#000',
+              secondary: '#fff',
+            },
+          
+            // Aria
+            ariaProps: {
+              role: 'status',
+              'aria-live': 'polite',
+            },
+          });
+          setEmail('');
+          setLoading(false);
+        }
+        
+      }
+
+    }catch(error) {
+      if(error instanceof AxiosError) {
+        console.log("Server Side error");
+        setLoading(false);
+      }
+    }
+  }  
+
   return (
 
     <>
+    <Toaster />
       <div className='w-full px-4 sm:px-8 lg:px-[60px] py-12 sm:py-10 bg-cover bg-no-repeat'
       style={{
         backgroundPositionX:600,
@@ -97,9 +150,9 @@ const Footer = () => {
           <div className='flex flex-col w-full sm:w-auto' >
           <h1 className="text-lg mb-4">Subscribe</h1>
           <h2 className="text-md mb-4">Stay updated with us!</h2>
-          <Input type="email" placeholder="Email" className="mb-4 pr-2" />
-          <Button variant="outline" className="flex gap-2 items-center hover:text-white">
-            Subscribe
+          <Input value={email} name="email" onChange={(e)=>{setEmail(e.target.value)}} type="email" placeholder="Email" className="mb-4 pr-2" />
+          <Button onClick={() => {emailSubscriber()}} variant="outline" className={`flex gap-2 items-center hover:text-white ${loading && 'animate-pulse cursor-wait'}`}>
+            {loading ? '...' : 'Subscribe'}
             <Send size={'18px'} />
           </Button>
         </div>

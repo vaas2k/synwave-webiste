@@ -83,7 +83,7 @@ const Page = ({ params }) => {
     <div className='flex flex-col'>
 
       {/**Header */}
-      <div className="relative flex items-center justify-center h-screen w-full">
+      <div className="relative flex items-center justify-center h-screen w-full bg-black">
         {/* Background video */}
         <video
           autoPlay

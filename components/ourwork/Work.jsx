@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ChevronDown,ChevronRight } from "lucide-react";
+import { ChevronDown,ChevronRight, MousePointerClick, PointerIcon } from "lucide-react";
 import Link from "next/link";
 import { IconBrandGithub, IconBrandGithubFilled } from "@tabler/icons-react";
 
@@ -86,12 +86,17 @@ export default function HeroParallaxDemo() {
               idx % 2 === 0 ? "sm:flex-row" : "sm:flex-row-reverse"
             } items-center justify-center gap-[30px] md:gap-[50px] lg:gap-[130px]`}
           >
+            <div>
+
             <img
               onClick={() => handleOpen(item.images)}
               src={item.thumbnail}
               className="w-[350px] md:w-[450px] lg:w-[550px] h-auto rounded-lg shadow-lg cursor-pointer"
               alt={item.title}
-            />
+              />
+              <div className="flex item-center justify-center mt-[-30px] animate-pulse opacity-80"><MousePointerClick color="white" /></div>
+            
+              </div>
             <div className="flex items-center flex-col text-center sm:text-left">
               <h1 className="text-rose-500 font-bold text-2xl md:text-2xl lg:text-4xl">
                 {item.title}
