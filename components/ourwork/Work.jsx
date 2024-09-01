@@ -89,7 +89,7 @@ export default function HeroParallaxDemo() {
             <img
               onClick={() => handleOpen(item.images)}
               src={item.thumbnail}
-              className="w-[250px] md:w-[300px] lg:w-[500px] h-auto rounded-lg shadow-lg cursor-pointer"
+              className="w-[350px] md:w-[450px] lg:w-[550px] h-auto rounded-lg shadow-lg cursor-pointer"
               alt={item.title}
             />
             <div className="flex items-center flex-col text-center sm:text-left">

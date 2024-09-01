@@ -69,7 +69,7 @@ export default function Industry() {
                 whileInView={"visible"}
                 initial="hidden"
                 variants={containerVariants}
-                className='relative z-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-y-12 gap-x-4 sm:gap-x-8 lg:gap-x-12 justify-center items-start text-left ml-3 sm:ml-[90px]'>
+                className='relative z-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-y-12 gap-x-4 sm:gap-x-8 lg:gap-x-12 justify-center items-start text-left '>
                 {icons.map((val, ind) => (
                     <motion.div
                     whileInView={"visible"}
