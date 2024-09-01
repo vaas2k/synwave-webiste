@@ -54,7 +54,7 @@ export default function FeaturesSectionDemo() {
       icon: <IconVideoPlus />,
     },
     {
-      title: "App Maintance",
+      title: "App Maintenance",
       description:
         "Ensuring your apps run smoothly with timely updates and reliable support.",
       icon: <IconAdjustmentsBolt />,

@@ -122,11 +122,11 @@ const GAI = {
     info :'Harness the power of artificial intelligence to revolutionize your business processes. Our generative AI services automate workflows, provide deep data insights, and generate innovative content, positioning your business at the forefront of digital transformation.',
     description: 'Generative AI refers to advanced artificial intelligence technologies that can create new content, solutions, and insights based on input data. This includes everything from generating text and images to automating complex processes. Our Generative AI services harness the power of machine learning algorithms to develop models that produce innovative and valuable outputs for your business. The process begins with gathering and preparing your data, which is essential for training accurate AI models. We then design and build custom models tailored to your specific needs, whether for content generation, predictive analytics, or process automation. After training and testing the models, we integrate them into your existing systems to enhance functionality and decision-making. Our services include ongoing support and optimization to ensure the AI solutions continue to deliver value.',
     features: [
-        'Custom AI Models',
-        'Data-Driven Insights',
+        'AI Chatbots',
+        'AI Model Integration',
         'Automation Solutions',
         'Natural Language Processing',
-        'Predictive Analytics',
+        'RAG',
         'Content Generation'
     ],
     benefits: [
@@ -163,7 +163,7 @@ const DevOps = {
     info : 'Optimize your software development lifecycle with our DevOps and CI/CD solutions. By automating your development, testing, and deployment processes, we help you deliver faster, more reliable software with reduced time-to-market and improved scalability.',
     description: 'DevOps with Continuous Integration/Continuous Deployment (CI/CD) is a practice that streamlines the development and deployment of software, making it faster and more efficient. This approach automates the workflow from coding to production, ensuring that updates are deployed quickly and reliably. Our DevOps services start with assessing your current development processes to identify areas for improvement. We then set up CI/CD pipelines that automate testing, building, and deployment, reducing manual errors and speeding up release cycles. Our approach includes integrating automated monitoring and security checks to ensure the stability and safety of your deployments. We provide ongoing support to manage and optimize the pipeline, ensuring your software delivery process is agile and scalable.',
     features: [
-        'Continuous Integration',
+        'CI/CD',
         'Automated Testing',
         'Version Control Integration',
         'Infrastructure as Code',

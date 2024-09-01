@@ -62,7 +62,7 @@ const About = () => {
 
     return (
         <div ref={ref} className='flex flex-col items-center'>
-            <div className='flex flex-col h-screen sm:flex-row items-center bg-opacity-50 bg-cover overflow-hidden sm:mt-[-60px]'
+            <div className='flex flex-col h-screen sm:flex-row items-center bg-opacity-50 bg-cover overflow-hidden mt-[-50px] sm:mt-[-60px]'
                 style={{
                     backgroundImage:
                         "url('https://images.unsplash.com/photo-1518767279257-af841be2732f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
@@ -74,12 +74,12 @@ const About = () => {
                     variants={textVariants}
                     className='flex flex-col items-center sm:items-start sm:w-1/2 px-6 sm:px-[130px] text-center sm:text-left '
                 >
-                    <h1 className='font-bold text-rose-600 text-4xl sm:text-5xl mb-6 w-full sm:w-[500px]'>Synwave at a Glance</h1>
+                    <h1 className='font-bold text-rose-600 text-4xl sm:text-5xl mb-6 w-full sm:w-[500px] my-[20px]'>Synwave at a Glance</h1>
                     <p className='text-sm sm:text-base leading-relaxed opacity-80 mb-8'>
                         At Synwave, we merge creativity with technology to deliver custom software solutions that drive growth. Whether you&apos;re a startup or an established business, we&apos;re here to turn your vision into reality with excellence and a forward-thinking approach.
                     </p>
                 </motion.div>
-                <div className='relative sm:w-1/2 flex flex-col items-center sm:items-end mt-[-50px] gap-4   '>
+                <div className='relative sm:w-1/2 flex flex-col items-center justify-center sm:items-end mt-[30px] sm:mt-[-50px] gap-4   mr-8 sm:mr-0'>
                     {[
                         'https://images.unsplash.com/photo-1531973576160-7125cd663d86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                         'https://images.unsplash.com/photo-1606857521015-7f9fcf423740?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -93,7 +93,7 @@ const About = () => {
                         animate="visible"
                         variants={imageVariants}
                         src={src}
-                        className={`h-[10rem] sm:h-[15rem] w-full sm:w-[28rem] object-cover rounded-lg shadow-lg transform 
+                        className={`h-[12.5rem] sm:h-[15rem] w-full sm:w-[28rem] object-cover rounded-lg shadow-lg transform 
                         ${i % 2 === 0 ? 'ml-[2rem]' : 'ml-[2rem] mr-3 sm:mr-[10rem]'} 
                           ${i === 1 ? 'mt-[-4rem]' : i === 2 ? 'mt-[-4rem]' : ''}`}
                       />

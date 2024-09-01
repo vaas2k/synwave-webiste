@@ -75,11 +75,11 @@ export default function Industry() {
                     whileInView={"visible"}
                         initial="hidden"
                         variants={itemVariants}
-                        key={ind} className='flex items-center'>
+                        key={ind} className='flex flex-col items-center justify-center gap-[20px]'>
                         <div className='bg-white hover:bg-rose-600 duration-500 hover:text-white p-3 sm:p-4 rounded-full shadow-lg'>
                             {val.icon}
                         </div>
-                        <p className='ml-3 sm:ml-4 text-xs sm:text-sm lg:text-md font-medium'>{val.title}</p>
+                        <p className=' text-xs sm:text-sm lg:text-md font-medium'>{val.title}</p>
                     </motion.div>
                 ))}
             </motion.div>

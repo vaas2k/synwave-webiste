@@ -10,7 +10,7 @@ const Select = React.forwardRef(({ className,reg,serType, type, ...props }, ref)
 
   
   const regions = [ "MENA - (Middle East & North Africa)","USA","Canada","Asia","Europe","Oceana (Australia & New Zealand)","Rest of the World"]
-  const services = [ 'Custom Software Development','Mobile App Development','Web App Development','Generative AI','DevOps','Video Editing',]
+  const services = [ 'Custom Software Development','Mobile App Development','Web App Development','Generative AI','DevOps','Video Editing','App Maintenance']
   const toShow = reg ? regions : services;
 
   let mouseX = useMotionValue(0);

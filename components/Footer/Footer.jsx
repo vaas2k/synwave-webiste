@@ -87,6 +87,7 @@ const Footer = () => {
               <Link href={'/service/Mobile App Development'}><li className='cursor-pointer hover:text-red-500 duration-500'>Mobile App Development</li></Link>
               <Link href={'/service/Web Development'}><li className='cursor-pointer hover:text-red-500 duration-500'>Web Development</li></Link>
               <Link href={'/service/Generative AI'}><li className='cursor-pointer hover:text-red-500 duration-500'>Generative AI</li></Link>
+              <Link href={'/service/App Maintenanc'}><li className='cursor-pointer hover:text-red-500 duration-500'>App Maintenance</li></Link>
               <Link href={'/service/DevOps'}><li className='cursor-pointer hover:text-red-500 duration-500'>DevOps & CI/CD</li></Link>
               <Link href={'/service/Video Editing'}><li className='cursor-pointer hover:text-red-500 duration-500'>Video Editing</li></Link>
             </ul>

@@ -43,7 +43,7 @@ const Page = ({ params }) => {
   else if (id === 'Generative AI') { showInfo = GAI; vid = '/videos/Ai.mp4'; }
   else if (id === 'DevOps') { showInfo = DevOps; vid = '/videos/devops.mp4'; }
   else if (id === 'Video Editing') { showInfo = VE; vid = '/videos/VE.mp4'; }
-  else if (id === 'App Maintance') { showInfo = AM; vid = '/videos/AM.mp4'; }
+  else if (id === 'App Maintenance') { showInfo = AM; vid = '/videos/AM.mp4'; }
   else if (id === 'Quality Assurance and Testing') { showInfo = QA; vid = '/videos/QA.mp4'; }
 
   const projects = [
@@ -114,7 +114,7 @@ const Page = ({ params }) => {
                 variant="outline"
                 className="flex justify-center items-center gap-2 w-full sm:w-52 h-12 text-white text-md hover:text-white"
               >
-                let&apos;s Talk Now
+                {id == 'Quality Assurance and Testing' ? "Not Available!" : <p>let&apos;s Talk Now</p>}
               </Button>
             </Link> 
           </div>
@@ -178,12 +178,12 @@ const Page = ({ params }) => {
       </div>
 
       {/**Process Section */}
-      <div className='px-6 sm:px-24'>
+      <div className='px-0 sm:px-24'>
         <Process />
       </div>
 
       {/**Consultation Section */}
-      <div className='mt-16 px-6 sm:px-24'>
+      <div className='mt-16 px-0 sm:px-24'>
         <Consultation />
       </div>
 

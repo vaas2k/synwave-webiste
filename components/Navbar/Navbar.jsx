@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
-import {  usePathname } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -12,6 +12,8 @@ import Link from 'next/link';
 import { Button } from '../ui/button';
 import M_Navbar from './M-Navbar';
 import MobileNavbar from './Dock';
+import {Modal,ModalTrigger} from "../ui/Contact";
+import { Mail } from 'lucide-react';
 
 const Navbar = () => {
 
@@ -26,15 +28,15 @@ const Navbar = () => {
         '/service/Generative%20AI',
         '/service/DevOps',
         '/service/Video%20Editing',
-        '/service/App%20Maintance',
+        '/service/App%20Maintenance',
         "/service/Quality%20Assurance%20and%20Testing"]
 
-        
-        const [landing, setLanding] = useState(true);
-        
-        useEffect(() => {
-        const newPath = paths.find((item) => {return item == pathname ? item : null })
-        setLanding(pathname == '/' || pathname == newPath  ? true : false);
+
+    const [landing, setLanding] = useState(true);
+
+    useEffect(() => {
+        const newPath = paths.find((item) => { return item == pathname ? item : null })
+        setLanding(pathname == '/' || pathname == newPath ? true : false);
     }, [pathname]);
 
     const services = [
@@ -42,8 +44,9 @@ const Navbar = () => {
         'Mobile App Development',
         'Web Development',
         'Generative AI',
+        'App Maintenance',
         'DevOps',
-        'Video Editing',
+        'Video Editing'
     ];
 
     // Handle scroll event to toggle navbar text color
@@ -58,7 +61,7 @@ const Navbar = () => {
         };
     }, []);
 
-    const isScrolled = scrollPosition > 100;   
+    const isScrolled = scrollPosition > 100;
 
     return (
         <>
@@ -70,11 +73,11 @@ const Navbar = () => {
                 >
                     <Link href="/">
                         <div className="flex">
-                                <img
-                                    src={isScrolled || !landing ? "/logos/new black.png" : "/logos/new white.png"}
-                                    className={isScrolled || !landing ? "h-[30px]" : "h-[33px] my-[10px]"}
-                                    alt="Synwave"
-                                />                               
+                            <img
+                                src={isScrolled || !landing ? "/logos/new black.png" : "/logos/new white.png"}
+                                className={isScrolled || !landing ? "h-[30px]" : "h-[33px] my-[10px]"}
+                                alt="Synwave"
+                            />
                         </div>
                     </Link>
 
@@ -156,16 +159,18 @@ const Navbar = () => {
                         </Link>
                     </div>
 
-                    <Link href="/contact">
-                        <div className="flex">
-                            <Button
-                                variant="outline"
-                                className="flex gap-2 items-center w-[200px] h-[50px] text-md hover:text-white"
-                            >
-                                Contact Now
-                                <PhoneCall size={'18px'} />
-                            </Button>
-                        </div>
+                    <Link href='/contact'>
+                    <Modal>
+            <ModalTrigger className={` ${isScrolled && !landing ? 'text-white' : 'text-black'}text-rose-500 flex justify-center group/modal-btn border-[1px] border-opacity-20 rounded-md px-[40px]`}>
+                <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
+                    GET IN TOUCH
+                </span>
+                <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
+                  <Mail color={'red'} size={'18px'}/>
+                </div>
+            </ModalTrigger>
+        </Modal>
+
                     </Link>
                 </div>
             </div>
@@ -178,11 +183,11 @@ const Navbar = () => {
                 >
                     <Link href="/">
                         <div className="flex">
-                                <img
-                                    src={isScrolled || !landing ? "/logos/black.png" : "/logos/white.png"}
-                                    className={'w-[70px] h-[70px]'}
-                                    alt="Synwave"
-                                />                               
+                            <img
+                                src={isScrolled || !landing ? "/logos/black.png" : "/logos/white.png"}
+                                className={'w-[70px] h-[70px]'}
+                                alt="Synwave"
+                            />
                         </div>
                     </Link>
 
