@@ -7,11 +7,15 @@ export const metadata = {
 }
 
 const Page = () => {
+
+  
+
   return (
     <div className='px-[30] sm:[30] mt-[120px]'>
       <About />
     </div>
   )
+  
 }
 
 export default Page;

@@ -38,6 +38,20 @@ export async function generateMetadata({ params }) {
     };
 }
 
+export async function generateStaticParams() {
+    const ids = [
+      'Custom Software Development',
+      'Mobile App Development',
+      'Web Development',
+      'Generative AI',
+      'App Maintenance',
+      'DevOps',
+      'Video Editing'
+    ]
+  
+    return ids.map((id) => id);
+}
+
 export default function RootLayout({ children }) {
     return (
         <div>

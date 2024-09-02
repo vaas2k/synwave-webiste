@@ -8,14 +8,11 @@ import HoverEffect from '../../../components/ui/card-hover-effect';
 import Link from 'next/link';
 import Consultation from '../../../components/Consultation/Consultation';
 import { motion } from 'framer-motion';
-import Head from 'next/head';
-
-
+import { notFound } from 'next/navigation';
 const textVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }, // Smooth animation for text
 };
-
 const featureVariants = {
   hidden: { opacity: 0, x: 20 },
   visible: (i) => ({
@@ -24,7 +21,6 @@ const featureVariants = {
     transition: { delay: i * 0.2, duration: 0.5 },
   }),
 };
-
 const benefitVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: (i) => ({
@@ -33,6 +29,9 @@ const benefitVariants = {
     transition: { delay: i * 0.2, duration: 0.5 },
   }),
 };
+
+
+
 
 const Page = ({ params }) => {
   const id = decodeURIComponent(params.id);
@@ -46,6 +45,17 @@ const Page = ({ params }) => {
   else if (id === 'Video Editing') { showInfo = VE; vid = '/videos/VE.mp4'; }
   else if (id === 'App Maintenance') { showInfo = AM; vid = '/videos/AM.mp4'; }
   else if (id === 'Quality Assurance and Testing') { showInfo = QA; vid = '/videos/QA.mp4'; }
+
+  if (!showInfo) {
+    return <div className='h-screen flex items-center justify-center flex-col'>
+      <h1>Not found - 404!</h1> <br />
+      <Link href="/">
+        <Button className="bg-rose-600">
+          Go back to Home
+        </Button>
+      </Link>
+    </div>
+  }
 
   return (
     <div className='flex flex-col'>
@@ -66,8 +76,8 @@ const Page = ({ params }) => {
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>
 
         {/* Text stays unaffected by the background opacity */}
-        <motion.div 
-          initial="hidden" 
+        <motion.div
+          initial="hidden"
           whileInView="visible"
           variants={textVariants}
           className='flex flex-col gap-5 px-6 sm:px-24 text-center sm:text-left'>
@@ -83,7 +93,7 @@ const Page = ({ params }) => {
               >
                 {id == 'Quality Assurance and Testing' ? "Not Available!" : <p>let&apos;s Talk Now</p>}
               </Button>
-            </Link> 
+            </Link>
           </div>
         </motion.div>
       </div>
@@ -115,7 +125,7 @@ const Page = ({ params }) => {
           variants={featureVariants}
           className="w-full hidden sm:block"
         >
-            <HoverEffect items={showInfo.features} />
+          <HoverEffect items={showInfo.features} />
         </motion.div>
       </div>
 
