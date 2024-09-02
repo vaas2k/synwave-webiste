@@ -8,6 +8,8 @@ import HoverEffect from '../../../components/ui/card-hover-effect';
 import Link from 'next/link';
 import Consultation from '../../../components/Consultation/Consultation';
 import { motion } from 'framer-motion';
+import Head from 'next/head';
+
 
 const textVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -34,7 +36,6 @@ const benefitVariants = {
 
 const Page = ({ params }) => {
   const id = decodeURIComponent(params.id);
-  console.log(id);
 
   let showInfo, vid, pic;
   if (id === 'Custom Software Development') { showInfo = CSD; vid = '/videos/videoplayback.mp4'; pic = 'https://plus.unsplash.com/premium_photo-1720287601920-ee8c503af775?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; }
@@ -46,42 +47,8 @@ const Page = ({ params }) => {
   else if (id === 'App Maintenance') { showInfo = AM; vid = '/videos/AM.mp4'; }
   else if (id === 'Quality Assurance and Testing') { showInfo = QA; vid = '/videos/QA.mp4'; }
 
-  const projects = [
-    {
-      title: "Stripe",
-      description: "A technology company that builds economic infrastructure for the internet.",
-      link: "https://stripe.com",
-    },
-    {
-      title: "Netflix",
-      description: "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-      link: "https://netflix.com",
-    },
-    {
-      title: "Google",
-      description: "A multinational technology company that specializes in Internet-related services and products.",
-      link: "https://google.com",
-    },
-    {
-      title: "Meta",
-      description: "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-      link: "https://meta.com",
-    },
-    {
-      title: "Amazon",
-      description: "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
-      link: "https://amazon.com",
-    },
-    {
-      title: "Microsoft",
-      description: "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
-      link: "https://microsoft.com",
-    },
-  ];
-
   return (
     <div className='flex flex-col'>
-
       {/**Header */}
       <div className="relative flex items-center justify-center h-screen w-full bg-black">
         {/* Background video */}

@@ -3,7 +3,8 @@ import {ContactForm} from '../../components/Contact/Contact-from';
 
 
 export const metadata = { 
-  title : "Contact"
+  title : "Contact",
+  descritpion : "Get in touch with Synwave for expert consultation on your next digital project. Whether you need custom software, mobile apps, or web solutions, our team is here to help you succeed."
 }
 
 

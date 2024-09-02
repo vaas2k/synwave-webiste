@@ -18,7 +18,7 @@ export const metadata = {
     default: "Synwave Solutions | A Software Development Company ",
     template: "%s - Synwave Solutions",
   },
-  description: "A Software Development Company",
+  description: "Synwave is a leading UK-based software development company specializing in custom software solutions, web and mobile app development, generative AI, and DevOps. Our expert team delivers cutting-edge, scalable, and user-centric digital experiences. From initial concept to deployment, we provide full-cycle development services, including quality assurance, app maintenance, and video editing. At Synwave, we harness innovative technologies to drive your business forward, ensuring robust and future-proof solutions tailored to your unique needs.",
 };
 
 export default function RootLayout({ children }) {
