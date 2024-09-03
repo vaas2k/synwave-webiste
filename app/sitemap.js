@@ -44,11 +44,5 @@ export default async function sitemap() {
             url : "https://synwavesolutions.com/contact",
             priority: 0.4
         },
-        {
-            url : "https://find-and-update.company-information.service.gov.uk/company/15861722",
-            priority: 0.1
-        }
-
-
     ]
 }

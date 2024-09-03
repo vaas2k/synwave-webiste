@@ -159,14 +159,13 @@ const Footer = () => {
 
           <div className=' flex gap-[15px] text-[12px] flex items-center '>
             <h className="cursor-pointer  flex items-center gap-[10px]"> <p className='text-[20px] flex'>&copy;</p> SYNWAVE SOLUTIONS.</h>
-            <h className="cursor-pointer ">All Rights Reserved.</h>
+            <Link href={'https://find-and-update.company-information.service.gov.uk/company/15861722'}></Link><h className="cursor-pointer ">All Rights Reserved.</h>
             <h className="cursor-pointer ">Terms & Conditions</h>
             <h className="cursor-pointer ">Policy</h> </div>
         </div>
 
         {/* Optional Logo */}
         <div className='flex justify-center'>
-
           <img src='/logos/white logo.png' className='w-[150px] h-[150px]' />
         </div>
 
