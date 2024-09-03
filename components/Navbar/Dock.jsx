@@ -22,7 +22,7 @@ export default function Dock() {
       icon: (
         <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://x.com/synwaveofficial",
     },
     {
         title: "Instagram",
