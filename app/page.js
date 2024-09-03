@@ -7,7 +7,7 @@ import Process from '../components/Process/Process';
 import ChoseUs from '../components/ChoseUs/ChoseUs';
 import Client from '../components/Clients/Client';
 import TechStack from '../components/TechStack/TechStack';
-import Head from 'next/head';
+import NextTopLoader from 'nextjs-toploader';
 
 export default function Home() {
   return (

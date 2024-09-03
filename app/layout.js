@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer/Footer'
 import Head from "next/head";
+import NextTopLoader from 'nextjs-toploader';
 
 const inter = Inter({ subsets: ["latin"] });
 const signika = Signika({ subsets: ['latin'], weight: '400' });
@@ -25,6 +26,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="">     
       <body className={`${signika.className} min-h-screen flex flex-col`}>
+        <NextTopLoader 
+        color="#F33A6A"
+        showSpinner={false}
+        height={1.5}
+        easing="ease"
+        />
         <Navbar />
         <main className="flex-grow">
           {children}
