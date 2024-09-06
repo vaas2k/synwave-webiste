@@ -45,7 +45,6 @@ export default function HeroParallaxDemo() {
   const toggleList = (title) => {
     setShowList(prevTitle => prevTitle === title ? '' : title);
 };
-
   return (
     <div className="flex flex-col">
       <div
