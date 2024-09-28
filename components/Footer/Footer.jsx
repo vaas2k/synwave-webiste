@@ -121,7 +121,7 @@ const Footer = () => {
               <Link href={'/about'}><li className='cursor-pointer hover:text-red-500 duration-500'>About</li></Link>
               <Link href={'/services'}><li className='cursor-pointer hover:text-red-500 duration-500'>Services</li></Link>
               <Link href={'/work'}><li className='cursor-pointer hover:text-red-500 duration-500'>Our Work</li></Link>
-              <li className='cursor-pointer hover:text-red-500 duration-500'>Reviews</li>
+              <Link href={'#'}><li className='cursor-pointer hover:text-red-500 duration-500'>Reviews</li></Link>
             </ul>
           </div>
 
