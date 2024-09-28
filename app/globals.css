@@ -71,7 +71,7 @@
 @layer base {
   /* Scrollbar for WebKit browsers (Chrome, Safari, etc.) */
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 0px;
     height: 12px; /* For horizontal scrollbar */
   }
 

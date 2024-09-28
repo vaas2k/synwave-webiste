@@ -81,9 +81,9 @@ const About = () => {
                 </motion.div>
                 <div className='relative sm:w-1/2 flex flex-col items-center justify-center sm:items-end mt-[30px] sm:mt-[-50px] gap-4   mr-8 sm:mr-0'>
                     {[
-                        'https://images.unsplash.com/photo-1531973576160-7125cd663d86?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-                        'https://images.unsplash.com/photo-1606857521015-7f9fcf423740?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-                        'https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+                        '../../sect/a1.jpg',
+                        '../../sect/a2.jpg',
+                        '../../sect/a3.jpg'
                     ].map((src, i) => (
                         <motion.img
                         alt='Image'

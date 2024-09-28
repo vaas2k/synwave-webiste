@@ -47,9 +47,9 @@ const S1 = () => {
         </motion.div>
         <div className='relative sm:w-1/2 flex flex-col items-end gap-[40px] sm:gap-[10px] '>
           {[ // array of image sources
-            'https://th.bing.com/th/id/OIG3._BrE7DPEoYULq63YxhVh?pid=ImgGn',
-            'https://jumpgrowth.com/wp-content/uploads/2021/01/10-Web-Development-Frameworks.png',
-            'https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/7z3AooFaJWC6QOaMgvAHLs/0175efdd25d7f14f8eaf545303e4022f/GettyImages-1255905237.jpg?w=1500&h=680&q=60&fit=fill&f=faces&fm=jpg&fl=progressive&auto=format%2Ccompress&dpr=1&w=1000'
+            '../../sect/s1.jpg',
+            '../../sect/s2.png',
+            '../../sect/s3.png',
           ].map((src, i) => (
             <motion.img
               alt='Image'

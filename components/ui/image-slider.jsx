@@ -50,6 +50,7 @@ export default function ImagesSlider ({
       })
       .catch((error) => console.error("Failed to load images", error));
   };
+
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "ArrowRight") {
@@ -130,7 +131,7 @@ export default function ImagesSlider ({
           <motion.img
             key={currentIndex}
             src={loadedImages[currentIndex]}
-            initial="initial"
+            initial={currentIndex === 0 ? false : "initial"}
             animate="visible"
             exit={direction === "up" ? "upExit" : "downExit"}
             variants={slideVariants}

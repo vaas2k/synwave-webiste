@@ -1,5 +1,5 @@
 'use client'
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
 import Input from '../ui/input';
 import { Send } from 'lucide-react';
 import { Button } from '../ui/button';
@@ -10,6 +10,11 @@ import toast, { Toaster } from 'react-hot-toast';
 
 const Footer = () => {
 
+
+  const [show, setshow] = useState(false);
+  useEffect(() => {
+    setshow(true);
+  }, [show])
   const [email , setEmail] = useState('');
   const [loading , setLoading] = useState(false);
   async function emailSubscriber (e) { 
@@ -57,6 +62,9 @@ const Footer = () => {
     }
   }  
 
+  if(!show) { 
+    return null;
+  }
   return (
 
     <>

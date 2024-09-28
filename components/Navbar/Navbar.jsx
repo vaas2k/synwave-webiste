@@ -12,7 +12,7 @@ import Link from 'next/link';
 import { Button } from '../ui/button';
 import M_Navbar from './M-Navbar';
 import MobileNavbar from './Dock';
-import {Modal,ModalTrigger} from "../ui/Contact";
+import { Modal, ModalTrigger } from "../ui/Contact";
 import { Mail } from 'lucide-react';
 
 const Navbar = () => {
@@ -20,7 +20,6 @@ const Navbar = () => {
     const pathname = usePathname();
     const [activeLink, setActiveLink] = useState(pathname);
     const [scrollPosition, setScrollPosition] = useState(0);
-
     const paths = [
         '/service/Custom%20Software%20Development',
         '/service/Mobile%20App%20Development',
@@ -160,16 +159,16 @@ const Navbar = () => {
                     </div>
 
                     <Link href='/contact'>
-                    <Modal>
-            <ModalTrigger className={` ${isScrolled && !landing ? 'text-white' : 'text-black'}text-rose-500 flex justify-center group/modal-btn border-[1px] border-opacity-20 rounded-md px-[40px]`}>
-                <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
-                    GET IN TOUCH
-                </span>
-                <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
-                  <Mail color={'red'} size={'18px'}/>
-                </div>
-            </ModalTrigger>
-        </Modal>
+                        <Modal>
+                            <ModalTrigger className={` ${isScrolled && !landing ? 'text-white' : 'text-black'}text-rose-500 flex justify-center group/modal-btn border-[1px] border-opacity-20 rounded-md px-[40px]`}>
+                                <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
+                                    GET IN TOUCH
+                                </span>
+                                <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
+                                    <Mail color={'red'} size={'18px'} />
+                                </div>
+                            </ModalTrigger>
+                        </Modal>
 
                     </Link>
                 </div>
