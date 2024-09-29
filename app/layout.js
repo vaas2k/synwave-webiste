@@ -1,4 +1,4 @@
-import { Inter, Signika, Dangrek, Revalia, Ubuntu_Mono, Trispace, Martian_Mono, JetBrains_Mono } from "next/font/google";
+import { Inter, Signika, Dangrek, Revalia, Ubuntu_Mono, Trispace, Martian_Mono, JetBrains_Mono,Fredoka } from "next/font/google";
 import "./globals.css";
 import Navbar from '../components/Navbar/Navbar'
 import Footer from '../components/Footer/Footer'
@@ -13,6 +13,7 @@ const ubuntu = Ubuntu_Mono({ subsets: ['latin'], weight: ['700'] });
 const trispace = Trispace({ subsets: ['latin'], weight: ['500'] });
 const martian_Mono = Martian_Mono({ subsets: ['latin'], weight: ['400'] });
 const jetBrains_Mono = JetBrains_Mono({ subsets: ['latin'], weight: ['400'] });
+const fredoka = Fredoka({ subsets: ['latin'], weight: ['variable'] });
 
 export const metadata = {
   title: {

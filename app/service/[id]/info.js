@@ -85,7 +85,7 @@ const MAD = {
         'Native & Hybrid Solutions',
         'Offline Capabilities',
         'High-Security Standards',
-        'Push Notifications',
+        'Mobile User Interface Design',
         'App Store Optimization'
     ],
     benefits: [
