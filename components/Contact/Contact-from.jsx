@@ -9,6 +9,7 @@ import { z, ZodError } from 'zod'
 import { Axis3D, Loader } from "lucide-react";
 import axios, { AxiosError } from "axios";
 import { Button } from "../ui/button";
+import { toast } from "sonner";
 
 
 
@@ -57,6 +58,7 @@ export function ContactForm() {
             if(req.status == 200) { 
                 console.log(req.status);
                 setLoading(false);
+                toast('Proposal Sent Successfully');
             }
         } catch (error) { 
             setLoading(false);
@@ -71,6 +73,7 @@ export function ContactForm() {
                      setRateError(true);
                 }
             }
+            toast("Request Failed, Try Again Later")
         }
     };
 

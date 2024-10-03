@@ -174,7 +174,7 @@ const Footer = () => {
 
         {/* Optional Logo */}
         <div className='flex justify-center'>
-          <img src='/logos/white logo.png' className='w-[150px] h-[150px]' />
+          <img src='/logos/newlop.png' className='my-4 sm:mb-10  w-[65px] h-[65px]' />
         </div>
 
       </div>

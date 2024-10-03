@@ -83,14 +83,14 @@ const ChoseUs = () => {
           <motion.div
             key={ind}
             variants={itemVariants}
-            className='flex flex-col items-center gap-4 shadow-lg rounded-xl w-full sm:w-[280px] p-6 sm:p-8 bg-white hover:bg-rose-50 transition-all duration-300'
+            className='flex flex-col items-center gap-4 hover:text-white text-black hover:shadow-lg rounded-xl w-full sm:w-[280px] p-6 sm:p-8 bg-white hover:bg-rose-500 transition-all duration-300'
           >
             <div className="bg-gradient-to-r from-rose-400 to-pink-400 text-white p-4 rounded-full mb-4">
               {item.icon}
             </div>
             <div className='text-center'>
-              <h1 className='text-rose-600 text-lg sm:text-xl font-bold mb-2'>{item.title}</h1>
-              <p className='text-sm sm:text-base text-gray-600'>{item.description}</p>
+              <h1 className='text-lg sm:text-xl font-bold mb-2 '>{item.title}</h1>
+              <p className='text-sm opacity-80 sm:text-base'>{item.description}</p>
             </div>
           </motion.div>
         ))}
