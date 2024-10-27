@@ -89,8 +89,6 @@ const Footer = () => {
               <h className="font-bold text-[14px]">England</h>
               <br />
               <br />
-              17 Albert Road
-              <br />
               Stechford
               <br />
               Birmingham
@@ -100,10 +98,8 @@ const Footer = () => {
             <p className='mb-2 mt-2 text-[12px]' >
               <h className="font-bold text-[14px]">Islamabad</h>
               <br />
-              <br />
-              731, Street 10
-              <br />
-              i-10
+              <br />   
+              i-11
               <br />
               Islamabad
               <br />

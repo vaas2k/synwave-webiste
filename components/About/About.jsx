@@ -190,26 +190,14 @@ const About = () => {
                 <div className='flex flex-col sm:flex-row gap-12 sm:gap-32 justify-center'>
                     <div className='flex text-center w-72 flex-col items-center p-6'>
                         <img src='/hero images/isb.png' className='object-cover w-24 h-24' />
-                        <h1 className='my-4 text-zinc-700 font-bold text-xl'>Islamabad</h1>
+                        <h1 className='my-4 text-zinc-700 font-bold text-xl'>Islamabad - PK</h1>
                         <h1 className='mb-4 text-zinc-700 font-bold text-md opacity-90'>Synwave Solutions Limited</h1>
-                        <p className='text-sm'>
-                            731, Street 10,
-                            i-10<br />
-                            Islamabad,
-                            Pakistan
-                        </p>
                     </div>
 
                     <div className='flex text-center w-72 flex-col items-center p-6'>
                         <img src='/hero images/uk.png' className='object-cover w-24 h-24' />
-                        <h1 className='my-4 text-zinc-700 font-bold text-xl'>England</h1>
+                        <h1 className='my-4 text-zinc-700 font-bold text-xl'>England - UK</h1>
                         <h1 className='mb-4 text-zinc-700 font-bold text-md opacity-90'>Synwave Solutions Limited</h1>
-                        <p className='text-sm'>
-                            17 Albert Road,
-                            Stechford<br />
-                            Birmingham,
-                            United Kingdom
-                        </p>
                     </div>
                 </div>
             </div>
